@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Purple Line Corridor</title>
+
+		<!-- meta -->
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <!-- css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/ionicons.min.css">
+		<link rel="stylesheet" href="css/pace.css">
+	    <link rel="stylesheet" href="css/custom.css">
+
+	    <!-- js -->
+	    <script src="js/jquery-2.1.3.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/pace.min.js"></script>
+	    <script src="js/modernizr.custom.js"></script>
+	    <link href="css/site.css" rel="stylesheet" type="text/css" />
+		<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/jquery.bootstrap.newsbox.min.js" type="text/javascript"></script>
+		<!--indicators on homepage-->
+		<link href="css/indicator.css" rel="stylesheet">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
+    	<script src="js/d3.v3.min.js"></script> 
+
+	</head>
+
+	<body ng-app="indicator">
+		<div>
+			<script src="//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js"></script>
+			<script> 
+				umdHeader.init(); 
+			</script>
+		</div>
+		<div class="container">	
+			<header id="site-header">
+				<div class="row">
+					<div class="col-md-2 col-sm-5 col-xs-8">
+						<div class="logo">
+							<a href="index.html"><img src = "img/HomepageBanner1.png" style = "width : 90%;"></img><h1></a></h1>
+						</div>
+					</div><!-- col-md-4 -->
+					<div class="col-md-10 col-sm-7 col-xs-4">
+						<nav class="main-nav" role="navigation">
+							<div class="navbar-header">
+  								<button type="button" id="trigger-overlay" class="navbar-toggle">
+    								<span class="ion-navicon"></span>
+  								</button>
+							</div>
+
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  								<ul class="nav navbar-nav navbar-right">
+    								<li class="cl-effect-11"><a href="index.html" data-hover="Home">Home</a></li>
+    								<li class="cl-effect-11"><a href="neighborhood.html" data-hover="Neighborhood">Neighborhood</a></li>
+    								<li class="cl-effect-11"><a href="housing.html" data-hover="Housing">Housing</a></li>
+    								<li class="cl-effect-11"><a href="labormarket.html" data-hover="Labor">Labor</a></li>
+    								<li class="cl-effect-11"><a href="localbusiness.html" data-hover="Business">Business</a></li>
+    								<li class="cl-effect-11"><a href="https://nfinio.cartodb.com/viz/119713e2-83c9-11e5-acac-0e787de82d45/public_map"  target= "_blank" data-hover="Gentrification">Gentrification</a></li>
+    								<li class="cl-effect-11"><a href="http://wikimapping.com/wikimap/PurpleLine.html" target= "_blank" data-hover="Crowdsourcing">Crowdsourcing</a></li>
+  								</ul>
+							</div><!-- /.navbar-collapse -->
+						</nav>
+						<div id="header-search-box">
+							<a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
+							<div id="search-form" class="search-form">
+								<form role="search" method="get" id="searchform" action="#">
+									<input type="search" placeholder="Search" required>
+									<button type="submit"><span class="ion-ios-search-strong"></span></button>
+								</form>				
+							</div>
+						</div>
+					</div><!-- col-md-8 -->
+				</div>
+			</header>
+		</div>
+
+		<div class="content-body">
+			<div class="container">
+				<div class="row">
+					<main class="col-md-12">
+						<h2>Purple Line Corridor: Beyond the Tracks</h2>
+						<article class="post">
+							<div class="entry-content clearfix">
+								<div class="col-md-8" style="padding-left: 0px !important; padding-right: 0px !important;">
+									<img class="img-responsive" src="img/purplelinemap.jpg" alt="Developer Image">
+								</div>
+								<div class="col-md-4 col-xs-12">					
+									<!-- start feedwind code --><iframe  height="350"  width="328" src="http://feed.mikle.com/widget/?rssmikle_url=https%3A%2F%2Fnews.google.com%2Fnews%3Fcf%3Dall%26hl%3Den%26pz%3D1%26ned%3Dus%26q%3Dpurple%2Bline%2Bmaryland%26output%3Drss&rssmikle_frame_width=328&rssmikle_frame_height=350&frame_height_by_article=0&rssmikle_target=_blank&rssmikle_font=Arial%2C%20Helvetica%2C%20sans-serif&rssmikle_font_size=12&rssmikle_border=off&responsive=off&text_align=left&text_align2=left&corner=off&scrollbar=on&autoscroll=on&scrolldirection=up&scrollstep=3&mcspeed=20&sort=New&rssmikle_title=on&rssmikle_title_sentence=Purple%20Line%20News&rssmikle_title_bgcolor=%231E0336&rssmikle_title_color=%23FFFFFF&rssmikle_item_bgcolor=%23FFFFFF&rssmikle_item_title_length=55&rssmikle_item_title_color=%231E0336&rssmikle_item_border_bottom=on&rssmikle_item_description=on&item_link=off&rssmikle_item_description_length=150&rssmikle_item_description_color=%23666666&rssmikle_item_date=on&rssmikle_timezone=Etc%2FGMT&datetime_format=%25b%20%25e%2C%20%25Y%20%25l%3A%25M%20%25p&item_description_style=text%2Btn&item_thumbnail=crop&item_thumbnail_selection=auto&article_num=15&rssmikle_item_podcast=off&" scrolling="no" name="rssmikle_frame" marginwidth="0" marginheight="0" vspace="0" hspace="0" frameborder="0"></iframe><div style="font-size:10px; text-align:center; width:328px;"><a href="http://feed.mikle.com/" target="_blank" style="color:#CCCCCC;">RSS Feed Widget</a><!--Please display the above link in your web page according to Terms of Service.--></div><!-- end feedwind code --><!--  end  feedwind code -->
+								</div>
+								<div class="row">
+									<div class="col-md-12" style="margin-top: 1%;">
+										<h2 style="text-align: center;">Welcome to the Purple Line Corridor Coalition Website</h2>
+										<hr>
+										<p style="text-align: center;">To ensure equitable and sustainable development along the Purple Line corridor, the Purple Line Corridor Coalition was founded in 2012. One major work of the PLCC is the Purple Line Community Compact, which a commitment by its signatories to work together to achieve a long-term vision for a prosperous, equitable, and environmentally sustainable Purple Line corridor. This Purple Line Dashboard is created to monitor major goals set in the Community Compact. The Dashboard includes five parts, the highlight page, local business, labor market, housing choices, and neighborhood.</p>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12" style="text-align: left;font-size: 14px;text-align: -webkit-right;">
+										<h4>(Figures represent %change of each from 2006-2010 to 2010-2014)</h4>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+										<div class="widget-container"
+									        data-expected="1.00"
+									        data-actual="0.068" indicator-widget></div>
+										<p>Population <img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									    <div class="widget-container"
+									        data-expected="1.00"
+									        data-actual="-0.098" indicator-widget></div>
+									    <p>Household Income <img src="img/down.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center;">
+									    <div class="widget-container"
+									        data-expected="1.00"
+									        data-actual="0.031" indicator-widget></div>
+									    <p>Unemployment <img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									    <div class="widget-container"
+									        data-expected="1.00"
+									        data-actual="-0.032" indicator-widget></div>
+									    <p>Housing Units <img src="img/down.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									    <div class="widget-container"
+									        data-expected="1.00"
+									        data-actual="0.133" indicator-widget></div>
+									    <p>Meadian Housing Value <img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center;">
+									    <div class="widget-container"
+									        data-expected="1.00"
+									        data-actual="-0.0495" indicator-widget></div>
+									    <p>Median Housing Rent <img src="img/down.png" style="width:5%"></p>
+									</div>
+								</div>
+								<div class="row">
+									<div class="height-40px"></div>
+									<h2 class="title text-center">Neighborhood by the Numbers</h2>
+									<div class="col-md-4">
+										<p>The Purple Line Community Compact will articulate a collective vision for vibrant economic and community development along the 16-mile corridor. The four buckets below represent the PLCC’s primary focus:
+											<li>Supporting and Growing Local Businesses.</li>
+											<li>Building a Thriving Labor Market.</li>
+											<li>Ensuring Housing Choices for All.</li>
+											<li>Celebrating Neighborhood Identities. </li></p>
+									</div>
+									<div class="col-md-8">
+									  <!-- Nav tabs -->
+									  <ul class="nav nav-tabs" role="tablist">
+									    <li role="presentation" class="active"><a href="#bethesda" aria-controls="bethesda" role="tab" data-toggle="tab">Bethesda</a></li>
+									    <li role="presentation"><a href="#silverspring" aria-controls="silverspring" role="tab" data-toggle="tab">Silver Spring</a></li>
+									    <li role="presentation"><a href="#internationalcorridor" aria-controls="internationalcorridor" role="tab" data-toggle="tab">International Corridor</a></li>
+									    <li role="presentation"><a href="#universityofmaryland" aria-controls="universityofmaryland" role="tab" data-toggle="tab">University of Maryland</a></li>
+									    <li role="presentation"><a href="#riverdale" aria-controls="riverdale" role="tab" data-toggle="tab">Riverdale</a></li>
+									  </ul>
+
+									  <!-- Tab panes -->
+									  <div class="tab-content">
+									    <div role="tabpanel" class="tab-pane fade in active" id="bethesda">
+									    	<div style="height: 10px"></div>
+									    	<p>Total population: 20675<br>
+											Median household income: $155056<br>
+											Total unemployment: 349<br>
+											Total housing units:  10175<br>
+											Median housing price: $742941<br>
+											Median rent: $1625<br>
+									    </div>
+									    <div role="tabpanel" class="tab-pane fade" id="silverspring">
+									    	<div style="height: 10px"></div>
+									    	<p>Total population: 34795<br>
+											Median household income: $89217<br>
+											Total unemployment: 1561<br>
+											Total housing units:  18295<br>
+											Median housing price: $363924<br>
+											Median rent: $1362<br>
+									    </div>
+									    <div role="tabpanel" class="tab-pane fade" id="internationalcorridor">
+									    	<div style="height: 10px"></div>
+									    	<p>Total population: 59160<br>
+											Median household income: $63308<br>
+											Total unemployment: 3359<br>
+											Total housing units:  18145<br>
+											Median housing price: $239039<br>
+											Median rent: $1083<br>
+									    </div>
+									    <div role="tabpanel" class="tab-pane fade" id="universityofmaryland">
+									    	<div style="height: 10px"></div>
+									    	<p>Total population: 22029<br>
+											Median household income: $58456<br>
+											Total unemployment: 1094<br>
+											Total housing units:  3360<br>
+											Median housing price: $276933<br>
+											Median rent: $1207<br>
+									    </div>
+									    <div role="tabpanel" class="tab-pane fade" id="riverdale">
+									    	<div style="height: 10px"></div>
+									    	<p>Total population: 30659<br>
+											Median household income: $61595<br>
+											Total unemployment: 1774<br>
+											Total housing units:  10213<br>
+											Median housing price: $210011<br>
+											Median rent: $1057<br>
+									    </div>
+									  </div>
+									</div>
+								</div>
+								<div class="height-40px"></div>
+								<h2 class="title text-center">Social</h2>
+								<ul class="social">
+									<li class="facebook"><a href="#"><span class="ion-social-facebook"></span></a></li>
+									<li class="twitter"><a href="#"><span class="ion-social-twitter"></span></a></li>
+									<li class="google-plus"><a href="#"><span class="ion-social-googleplus"></span></a></li>
+									<li class="tumblr"><a href="#"><span class="ion-social-tumblr"></span></a></li>
+								</ul>
+							</div>
+						</article>
+					</main>
+				</div>
+			</div>
+		</div>
+		<footer id="site-footer">
+			<div class="container">
+				<div class="row">
+  					<hr style="margin-top:0; margin-bottom:0;">
+					<div class="col-md-8">
+						<p>© National Center for Smart Growth at The University of Maryland, College Park</p>
+					</div>
+					<div class="col-md-4" style="text-align:right;"><img src="img/umdLogo.png" style="width : 40%;"></div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Mobile Menu -->
+		<div class="overlay overlay-hugeinc">
+			<button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="full-width.html">Blog</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<script src="js/script.js"></script>
+		<script type="text/javascript">
+		    $(function () {
+				
+				$(".demo2").bootstrapNews({
+		            newsPerPage: 3,
+		            autoplay: true,
+					pauseOnHover: true,
+					navigation: false,
+		            direction: 'down',
+		            newsTickerInterval: 2000,
+		            onToDo: function () {
+		                //console.log(this);
+		            }
+		        });
+		    });
+		</script>
+	<script type="text/javascript" src="js/indicator.js"></script>	
+		
+    <!-- 
+        So we can test this locally without running a server
+        otherwise it tries to make an XMLHttpRequest.
+
+        CONS: Not cached.
+     -->
+     <script type="text/ng-template" id="indicator.html">
+        <svg class="indicator-circle" 
+            width="150" height="150" 
+            version="1.1" 
+            xmlns="http://www.w3.org/2000/svg">
+            <g>
+                <circle cx="50%" cy="50%" r="45" />
+                <text class="progress-text actual" text-anchor="middle" alignment-baseline="middle" dx="50%" dy="50%">
+                    <tspan class="actual">{{ actual_formatted }}</tspan>
+                    <tspan class="percent">%</tspan>
+                </text>
+                <text class="progress-text" text-anchor="middle" alignment-baseline="middle" dx="50%" dy="60%">Change</text>
+            </g>
+            <g path-group>
+                <path class="progress-bar inner-bar normal" stroke-linejoin="round" inner-path />
+                <path class="progress-bar outer-bar" stroke-linejoin="round" outer-path />
+            </g>
+        </svg>
+     </script>
+	</body>
+</html>

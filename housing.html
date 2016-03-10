@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Purple Line Corridor</title>
+
+		<!-- meta -->
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <!-- css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/ionicons.min.css">
+		<link rel="stylesheet" href="css/pace.css">
+	    <link rel="stylesheet" href="css/custom.css">
+
+	    <!-- js -->
+	    <script src="js/jquery-2.1.3.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/pace.min.js"></script>
+	    <script src="js/modernizr.custom.js"></script>
+	    <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+	    <script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/data.js"></script>
+		<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+	</head>
+
+	<body>
+		<div class="container">	
+			<div>
+				<script src="//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js"></script>
+				<script> 
+					umdHeader.init(); 
+				</script>
+			</div>
+			<header id="site-header">
+				<div class="row">
+					<div class="col-md-2 col-sm-5 col-xs-8">
+						<div class="logo">
+							<a href="index.html"><img src = "img/HomepageBanner1.png" style = "width : 90%;"></img><h1></a></h1>
+						</div>
+					</div><!-- col-md-4 -->
+					<div class="col-md-10 col-sm-7 col-xs-4">
+						<nav class="main-nav" role="navigation">
+							<div class="navbar-header">
+  								<button type="button" id="trigger-overlay" class="navbar-toggle">
+    								<span class="ion-navicon"></span>
+  								</button>
+							</div>
+
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  								<ul class="nav navbar-nav navbar-right">
+    								<li class="cl-effect-11"><a href="index.html" data-hover="Home">Home</a></li>
+    								<li class="cl-effect-11"><a href="neighborhood.html" data-hover="Neighborhood">Neighborhood</a></li>
+    								<li class="cl-effect-11"><a href="housing.html" data-hover="Housing">Housing</a></li>
+    								<li class="cl-effect-11"><a href="labormarket.html" data-hover="Labor">Labor</a></li>
+    								<li class="cl-effect-11"><a href="localbusiness.html" data-hover="Business">Business</a></li>
+    								<li class="cl-effect-11"><a href="https://nfinio.cartodb.com/viz/119713e2-83c9-11e5-acac-0e787de82d45/public_map"  target= "_blank" data-hover="Gentrification">Gentrification</a></li>
+    								<li class="cl-effect-11"><a href="http://wikimapping.com/wikimap/PurpleLine.html" target= "_blank" data-hover="Crowdsourcing">Crowdsourcing</a></li>
+  								</ul>
+							</div><!-- /.navbar-collapse -->
+						</nav>
+						<div id="header-search-box">
+							<a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
+							<div id="search-form" class="search-form">
+								<form role="search" method="get" id="searchform" action="#">
+									<input type="search" placeholder="Search" required>
+									<button type="submit"><span class="ion-ios-search-strong"></span></button>
+								</form>				
+							</div>
+						</div>
+					</div><!-- col-md-8 -->
+				</div>
+			</header>
+		</div>
+
+		<div class="content-body">
+			<div class="container">
+				<div class="row">
+					<main class="col-md-12">
+						<h2 class="title text-center">Housing Trends in the Purple Line Corridor</h2>
+						<div class="row">
+							<div class="col-md-6">
+								<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								
+							</div>
+							<div class="col-md-6">
+								<div id="container1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+							</div>
+						</div>
+					</main>
+				</div>
+			</div>
+		</div>
+		<footer id="site-footer">
+			<div class="container">
+				<div class="row">
+  					<hr style="margin-top:0; margin-bottom:0;">
+					<div class="col-md-8">
+						<p>© National Center for Smart Growth at The University of Maryland, College Park</p>
+					</div>
+					<div class="col-md-4" style="text-align:right;"><img src="img/umdLogo.png" style="width : 40%;"></div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Mobile Menu -->
+		<div class="overlay overlay-hugeinc">
+			<button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="full-width.html">Blog</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<script src="js/script.js"></script>
+		<script type="text/javascript">
+		$(function () {
+		    $('#container').highcharts({
+		        chart: {
+		            type: 'spline'
+		        },
+		        title: {
+		            text: 'Ownership Rate in the Purple Line Neighborhood'
+		        },
+		        subtitle: {
+		            text: 'Data ranging from 2000 to 2014'
+		        },
+		        xAxis: {
+		            type: 'datetime',
+		            title: {
+		                text: 'Date'
+		            }
+		        },
+		        yAxis: {
+		            title: {
+		                text: 'Snow depth (m)'
+		            },
+		            min: 0
+		        },
+		        tooltip: {
+		            headerFormat: '<b>{series.name}</b><br>',
+		            pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
+		        },
+
+		        plotOptions: {
+		            spline: {
+		                marker: {
+		                    enabled: true
+		                }
+		            }
+		        },
+
+		        series: [{
+		            name: 'Bethesda',
+		            // Define the data points. All series have a dummy year
+		            // of 1970/71 in order to be compared on the same x axis. Note
+		            // that in JavaScript, months start at 0 for January, 1 for February etc.
+		            data: [
+		                [Date.UTC(2000, 01, 01), 0.541827351],
+		                [Date.UTC(2008, 01, 01), 0.531582522],
+		                [Date.UTC(2011, 01, 01), 0.5104687],
+		                [Date.UTC(2012, 01, 01), 0.515004227]
+		            ]
+		        }, {
+		            name: 'International Corridor',
+		            data: [
+		                [Date.UTC(2000, 01, 01), 0.404551673],
+		                [Date.UTC(2008, 01, 01), 0.425435457],
+		                [Date.UTC(2011, 01, 01), 0.392657016],
+		                [Date.UTC(2012, 01, 01), 0.390084082]
+		            ]
+		        }, {
+		            name: 'Riverdale-New Carrolton',
+		            data: [
+		               [Date.UTC(2000, 01, 01), 0.501669907],
+		                [Date.UTC(2008, 01, 01), 0.478037239],
+		                [Date.UTC(2011, 01, 01), 0.476958286],
+		                [Date.UTC(2012, 01, 01), 0.484029741]
+		            ]
+		        }, {
+		            name: 'Silver Spring',
+		            data: [
+		                [Date.UTC(2000, 01, 01), 0.278380853],
+		                [Date.UTC(2008, 01, 01), 0.313073094],
+		                [Date.UTC(2011, 01, 01), 0.314145127],
+		                [Date.UTC(2012, 01, 01), 0.300250306]
+		            ]
+		        }, {
+		            name: 'University of Maryland',
+		            data: [
+		                [Date.UTC(2000, 01, 01), 0.562019759],
+		                [Date.UTC(2008, 01, 01), 0.473424339],
+		                [Date.UTC(2011, 01, 01), 0.457079506],
+		                [Date.UTC(2012, 01, 01), 0.477979275]
+		            ]
+		        }]
+		    });
+		});
+
+		$(function () {
+    // Create the chart
+		    $('#container1').highcharts({
+		        chart: {
+		            type: 'column'
+		        },
+		        title: {
+		            text: 'Median House Price per Subarea (Year 2014)'
+		        },
+		        subtitle: {
+		            text: 'Click the columns to view data over the years</a>.'
+		        },
+		        xAxis: {
+		            type: 'Subarea'
+		        },
+		        yAxis: {
+		            title: {
+		                text: 'Median House Price'
+		            }
+
+		        },
+		        legend: {
+		            enabled: false
+		        },
+		        plotOptions: {
+		            series: {
+		                borderWidth: 0,
+		                dataLabels: {
+		                    enabled: true,
+		                    format: '{point.y:.1f}%'
+		                }
+		            }
+		        },
+
+		        tooltip: {
+		            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+		            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}</b><br/>'
+		        },
+
+		        series: [{
+		            name: 'Subarea',
+		            colorByPoint: true,
+		            data: [{
+		                name: 'Bethesda',
+		                y: 742941.3529,
+		                drilldown: 'Bethesda'
+		            }, {
+		                name: 'New Carrolton',
+		                y: 210010.5263,
+		                drilldown: 'New Carrolton'
+		            }, {
+		                name: 'International Corridor',
+		                y: 239038.7097,
+		                drilldown: 'International Corridor'
+		            }, {
+		                name: 'University of Maryland',
+		                y: 276933.3333,
+		                drilldown: 'University of Maryland'
+		            }, {
+		                name: 'Silver Spring',
+		                y: 363924,
+		                drilldown: 'Silver Spring'
+		            }]
+		        }],
+		        drilldown: {
+		            series: [{
+		                name: 'Bethesda',
+		                id: 'Bethesda',
+		                data: [
+		                    [
+		                        '2000',
+		                        343300
+		                    ],
+		                    [
+		                        '2006-2010',
+		                        752200.1765
+		                    ],
+		                    [
+		                        '2009-2013',
+		                        746429.5882
+		                    ],
+		                    [
+		                        '2010-2014',
+		                        742941.3529
+		                    ]
+		                ]
+		            }, {
+		                name: 'New Carrolton',
+		                id: 'New Carrolton',
+		                data: [
+		                    [
+		                        '2000',
+		                        116142.1053
+		                    ],
+		                    [
+		                        '2006-2010',
+		                        264015.7895
+		                    ],
+		                    [
+		                        '2009-2013',
+		                        218652.6316
+		                    ],
+		                    [
+		                        '2010-2014',
+		                        210010.5263
+		                    ]
+		                ]
+		            }, {
+		                name: 'International Corridor',
+		                id: 'International Corridor',
+		                data: [
+		                    [
+		                        '2000',
+		                        161029.0323
+		                    ],
+		                    [
+		                        '2006-2010',
+		                        321622.5806
+		                    ],
+		                    [
+		                        '2009-2013',
+		                        260470.9677
+		                    ],
+		                    [
+		                        '2010-2014',
+		                        239038.7097
+		                    ]
+		                ]
+		            }, {
+		                name: 'University of Maryland',
+		                id: 'University of Maryland',
+		                data: [
+		                    [
+		                        '2000',
+		                        171937.5
+		                    ],
+		                    [
+		                        '2006-2010',
+		                        370466.6667
+		                    ],
+		                    [
+		                        '2009-2013',
+		                        278788.8889
+		                    ],
+		                    [
+		                        '2010-2014',
+		                        276933.3333
+		                    ]
+		                ]
+		            }, {
+		                name: 'Silver Spring',
+		                id: 'Silver Spring',
+		                data: [
+		                    [
+		                        '2000',
+		                        177750
+		                    ],
+		                    [
+		                        '2006-2010',
+		                        369992
+		                    ],
+		                    [
+		                        '2009-2013',
+		                        358600
+		                    ],
+		                    [
+		                        '2010-2014',
+		                        363924
+		                    ]
+		                ]
+		            }]
+		        }
+		    });
+		});
+		</script>
+
+	</body>
+</html>
