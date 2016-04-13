@@ -26,16 +26,23 @@
 	    <!-- Highcharts -->
 	    <script src="https://code.highcharts.com/highcharts.js"></script>
 		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/drilldown.js"></script>
 
 	</head>
 
 	<body onload="setViewFunction()">
 		<div class="container">	
+			<div>
+				<script src="//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js"></script>
+				<script> 
+					umdHeader.init(); 
+				</script>
+			</div>
 			<header id="site-header">
 				<div class="row">
 					<div class="col-md-2 col-sm-5 col-xs-8">
 						<div class="logo">
-							<a href="index.html"><img src = "img/HomepageBanner1.png" style = "width : 90%;"></img><h1></a></h1>
+							<a href="index.html"><img src = "img/HomepageBanner1.png" style = "width : 90%;"></img></a>
 						</div>
 					</div><!-- col-md-4 -->
 					<div class="col-md-10 col-sm-7 col-xs-4">
@@ -48,13 +55,19 @@
 
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   								<ul class="nav navbar-nav navbar-right">
-    								<li class="cl-effect-11"><a href="index.html" data-hover="Home">Home</a></li>
     								<li class="cl-effect-11"><a href="neighborhood.html" data-hover="Neighborhood">Neighborhood</a></li>
     								<li class="cl-effect-11"><a href="housing.html" data-hover="Housing">Housing</a></li>
     								<li class="cl-effect-11"><a href="labormarket.html" data-hover="Labor">Labor</a></li>
     								<li class="cl-effect-11"><a href="localbusiness.html" data-hover="Business">Business</a></li>
-    								<li class="cl-effect-11"><a href="gentrification.html"  data-hover="Gentrification">Gentrification</a></li>
-    								<li class="cl-effect-11"><a href="http://wikimapping.com/wikimap/PurpleLine.html" target= "_blank" data-hover="Crowdsourcing">Crowdsourcing</a></li>
+    								
+  										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-top: -1%">Tools
+    										<span class="caret"></span>
+  										</button>
+    									<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    										<li><a href="https://nfinio.cartodb.com/viz/119713e2-83c9-11e5-acac-0e787de82d45/public_map"  target= "_blank" data-hover="Gentrification" style="font-size: 14px !important; margin-left: 8px !important;">Gentrification</a></li>
+    										<li><a href="http://wikimapping.com/wikimap/PurpleLine.html" target= "_blank" data-hover="Crowdsourcing" style="font-size: 14px !important; margin-left: 8px !important;">Crowdsourcing</a></li>
+    									</ul>
+    							
   								</ul>
 							</div><!-- /.navbar-collapse -->
 						</nav>
@@ -74,41 +87,41 @@
 
 		<div class="content-body">
 			<div class="container">
+				<main class="col-md-12">
+					<h2 class="title">Neighborhood Identities</h2>
+				</main>
 				<div class="row">
-					<main class="col-md-12">
+					<div class="col-md-4" style="margin-left: 4%;">
 						<p style="text-align: center">Neighborhood identities include demographic composition and physical environment features. The Purple Line corridor has a diverse population.Between XX and XX, the total population increased by XX, the proportion of African American population increased/decreased by XX, and that of the Hispanic populatrion increased/decreased by XX.</p>					
-						
-						<div class="col-md-4">
-							<div class="kpi-item kpi-growth" style="margin-left: 30%;">
+					</div>
+						<div class="col-md-2">
+							<div class="kpi-item kpi-growth" style="margin-left: 10%;">
       							<div class="kpi-header">
         							<h3>Highest Population</h3>
-       			 						<p>Neighborhood as of 2014</p>
       							</div>
      	 					<div class="kpi-body">
         						<p class="kpi-details-tl">Silver Spring</p>
-        						<p class="kpi-text red">34795</p>
+        						<p class="kpi-text red">34,795</p>
         						<p class="kpi-details-tr">YTD</p>
 						    </div>
     					</div>
     				</div>
-						<div class="col-md-4">
-							<div class="kpi-item kpi-growth" style="margin-left: 20%;">
+						<div class="col-md-2">
+							<div class="kpi-item kpi-growth" style="margin-left: 30%;">
       							<div class="kpi-header">
         							<h3>Highest White Population</h3>
-        								<p>2014 Snapshot</p>
       							</div>
       							<div class="kpi-body">
-        							<p class="kpi-details-tl"> Bethesda</span</p>
+        							<p class="kpi-details-tl"> Bethesda</p>
         							<p class="kpi-details-tr">YTD</p>
         							<p class="kpi-text green">84.26%</p>
       							</div>
     						</div>
     					</div>
-						<div class="col-md-4">
-							<div class="kpi-item kpi-growth" style="margin-left: 10%;">
+						<div class="col-md-2">
+							<div class="kpi-item kpi-growth" style="margin-left: 50%;">
       							<div class="kpi-header">
         							<h3>New Projects</h3>
-        								<p>Upcoming Constructions</p>
       							</div>
       							<div class="kpi-body">
         							<p class="kpi-details-tl">Residential</p>
@@ -117,6 +130,7 @@
       							</div>
     						</div>
 						</div>
+					</div>
 						<div class="row">
 						<div class="col-md-5">
 							<div style="text-align: right">
@@ -144,7 +158,7 @@
 								            <th>Population (2000) </th>
 								            <th>Population Trend</th>
 								            <th>Population (2014)</th>
-								            <th>Population Change</th>
+								            <th>Periodic Population Change</th>
 								            <th>Population Change</th>
 								        </tr>
 								    </thead>
@@ -153,48 +167,48 @@
 								            <th>Bethesda - Chevy Chase</th>
 								            <td>14801</td>
 								            <td data-sparkline="14801, 18703, 20372, 20675 "/>
-								            <td>20675</td>
-								            <td><img src="img/up.png" style="width:15%">+5874</td>
+								            <td>20,675</td>
+								            <td><img src="img/up.png" style="width:15%"> +5874</td>
 								            <td data-sparkline="3902, 1669, 303 ; column"/>
 								        </tr>
 								        <tr>
 								            <th>International Corridor</th>
-								            <td>49605</td>
+								            <td>49,605</td>
 								            <td data-sparkline="49605, 55257, 58776, 59160 "/>
 								            <td>59160</td>
-								            <td><img src="img/up.png" style="width:15%">+9555</td>
+								            <td><img src="img/up.png" style="width:15%"> +9555</td>
 								            <td data-sparkline="5652, 3519, 384 ; column"/>
 								        </tr>
 								        <tr>
 								            <th>Riverdale - New Carrolton</th>
-								            <td>29452</td>
+								            <td>29,452</td>
 								            <td data-sparkline="29452, 29108, 29674, 30659 "/>
 								            <td>30659</td>
-								            <td><img src="img/up.png" style="width:15%">+1207</td>
+								            <td><img src="img/up.png" style="width:15%"> +1207</td>
 								            <td data-sparkline="-344, 566, 985; column"/>
 								        </tr>
 								        <tr>
 								            <th>Silver Spring</th>
-								            <td>31504</td>
+								            <td>31,504</td>
 								            <td data-sparkline="31504, 31493, 34696, 34795 "/>
 								            <td>34795</td>
-								            <td><img src="img/up.png" style="width:15%">+3291</td>
+								            <td><img src="img/up.png" style="width:15%"> +3291</td>
 								            <td data-sparkline="-11, 3203, 99; column"/>
 								        </tr>
 								        <tr>
 								            <th>University of Maryland</th>
-								            <td>7960</td>
+								            <td>7,960</td>
 								            <td data-sparkline="7960, 21277, 21606, 22029 "/>
 								            <td>22029</td>
-								            <td><img src="img/up.png" style="width:15%">+14069</td>
+								            <td><img src="img/up.png" style="width:15%"> +14069</td>
 								            <td data-sparkline="13317, 329, 423 ; column"/>
 								        </tr>
 								        <tr style="background-color: gainsboro;">
 								            <th>Total Population</th>
-								            <td>133322</td>
+								            <td>133,322</td>
 								            <td data-sparkline="133322, 155838, 165124, 167318 "/>
-								            <td>167318</td>
-								            <td><img src="img/up.png" style="width:15%">+33996</td>
+								            <td>167,318</td>
+								            <td><img src="img/up.png" style="width:15%"> +33996</td>
 								            <td data-sparkline="22516, 9286, 2194 ; column"/>
 								        </tr>
 								    </tbody>
@@ -205,18 +219,66 @@
 						</div>
 						<hr>
 						<div class="row">
-							<div class="col-md-8">
-								<div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+							<div class="col-md-5">
+								<div id="containerWhite" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								<div id="containerBlack" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								<div id="containerAsian" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								<div id="containerHispanic" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 							</div>
-							<div class="col-md-4">
-								<p>The visualization talks about the trends in the change of Hispanic population in the Purple Line Neighborhood from 2000 to 2014. The spline shows an average trend in the change of population. The International Corridor holds maximum Hispanic occupancy. Looking closely at the trands, Hispanic population in Silver Spring and University of Maryland regions experienced a drop from 2008 to 2011. </p>
-								<p>The spline shows a considerable increase in Hispanic population from 2000 to 2008 and a gradual increase since then until 2014.</p>
-						</div>
+							<div class="col-md-7">
+								<div class="col-md-3">
+									<div style="text-align: right">
+										<div class="dropdown">
+							  				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select a race
+							  				<span class="caret"></span></button>
+							  				<ul class="dropdown-menu">
+							    				<li><a href="#" id="White">White</a></li>
+							    				<li><a href="#" id="Black">Black</a></li>
+							    				<li><a href="#" id="Asian">Asian</a></li>
+							    				<li><a href="#" id="Hispanic">Hispanic</a></li>
+							  				</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-9" id="titleWhite">
+									<h4>White Population Trends</h4>
+									<hr>
+								</div>
+								<div class="col-md-9" id="titleBlack">
+									<h4>Black Population Trends</h4>
+									<hr>
+								</div>
+								<div class="col-md-9" id="titleAsian">
+									<h4>Asian Population Trends</h4>
+									<hr>
+								</div>
+								<div class="col-md-9" id="titleHispanic">
+									<h4>Hispanic Population Trends</h4>
+									<hr>
+								</div>
+								
+								<div class="row">
+									<div class="col-md-12">
+										The visualization talks about the trends in the change of Hispanic population in the Purple Line Neighborhood from 2000 to 2014. The spline shows an average trend in the change of population. The International Corridor holds maximum Hispanic occupancy. Looking closely at the trands, Hispanic population in Silver Spring and University of Maryland regions experienced a drop from 2008 to 2011. 
+										<br>The spline shows a considerable increase in Hispanic population from 2000 to 2008 and a gradual increase since then until 2014.
+									</div>
+								</div>
+							</div>
+						
 						<hr>
 						<div class="row">
 							<div class="col-md-12">
 								<h4>Upcoming and Under Construction Projects in the Neighborhood</h4>
 								<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1104px; height: 469px;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;ConstructionMap&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='1104' height='469' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='ConstructionMap&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;ConstructionMap&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<h4>Others Sources</h4>
+							<div class="col-md-1"></div>
+							<div class="col-md-3">
+								<a href="http://uofmd.maps.arcgis.com/apps/MapTour/index.html?appid=e7e0a350e3c94b3f81747ba8cc9549b9"><img src="img/langleyPark.png" target= "_blank" style="width: 60%;" ><br><br>
+								Langley Park Story Map</a>
 							</div>
 						</div>
 					</main>
@@ -240,336 +302,19 @@
 			<button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
 			<nav>
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="full-width.html">Blog</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="index.html" data-hover="Home">Home</a></li>
+					<li><a href="neighborhood.html" data-hover="Neighborhood">Neighborhood</a></li>
+					<li><a href="housing.html" data-hover="Housing">Housing</a></li>
+					<li><a href="labormarket.html" data-hover="Labor">Labor</a></li>
+					<li><a href="localbusiness.html" data-hover="Business">Business</a></li>
+					<li><a href="https://nfinio.cartodb.com/viz/119713e2-83c9-11e5-acac-0e787de82d45/public_map"  target= "_blank" data-hover="Gentrification">Gentrification</a></li>
+					<li class="cl-effect-11"><a href="http://wikimapping.com/wikimap/PurpleLine.html" target= "_blank" data-hover="Crowdsourcing">Crowdsourcing</a></li>
 				</ul>
 			</nav>
 		</div>
 
 		<script src="js/script.js"></script>
-		<script type="text/javascript">
-			$(function () {
-			    $('#container').highcharts({
-			        chart: {
-			            type: 'bar'
-			        },
-			        title: {
-			            text: 'Population Distribution'
-			        },
-			        xAxis: {
-			            categories: ['Bethesda - Chevy Chase', 'International Corridor', 'Riverdale - New Carrolton', 'Silver Spring', 'University of Maryland']
-			        },
-			        yAxis: {
-			            min: 0,
-			            title: {
-			                text: 'Total Population'
-			            }
-			        },
-			        legend: {
-			            reversed: true
-			        },
-			        plotOptions: {
-			            series: {
-			                stacking: 'normal'
-			            }
-			        },
-			        series: [{
-			            name: 'White',
-			            data: [17421, 17196, 12115, 19641, 14321]
-			        }, {
-			            name: 'Black',
-			            data: [1181, 13509, 15455, 10898 ,3638]
-			        }, {
-			            name: 'Asian',
-			            data: [2483, 3001, 971, 3204, 3275]
-			        }, {
-			            name: 'Hispanic',
-			            data: [2483, 3001, 971, 3204, 3275]
-			        }]
-			    });
-			});
-
-			$(function () {
-			    $('#container1').highcharts({
-			        chart: {
-			            type: 'bar'
-			        },
-			        title: {
-			            text: 'Population Percentage'
-			        },
-			        xAxis: {
-			            categories: ['Bethesda - Chevy Chase', 'International Corridor', 'Riverdale - New Carrolton', 'Silver Spring', 'University of Maryland']
-			        },
-			        yAxis: {
-			            min: 0,
-			            title: {
-			                text: 'Population Occupancy Rate'
-			            }
-			        },
-
-			        legend: {
-			            reversed: true
-			            },
-			        tooltip: {
-			            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
-			            shared: true
-			        },
-			        plotOptions: {
-			            series: {
-			                stacking: 'percent'
-			            }
-			        },
-			        series: [{
-			            name: 'White',
-			            data: [84.26118501, 29.06693712, 39.51531361, 56.44776548, 65.00975986]
-			        }, {
-			            name: 'Black',
-			            data: [5.712212817, 22.8346856, 50.40934147, 31.32059204, 16.5145944]
-			        }, {
-			            name: 'Asian',
-			            data: [12.00967352, 5.072684246, 3.167096122, 9.208219572, 14.86676654]
-			        }, {
-			            name: 'Hispanic',
-			            data: [6.911729141, 60.56795132, 37.59091947, 12.70010059, 8.634073267]
-			        }]
-			    });
-			});
-
-			$(function () {
-			    /**
-			     * Create a constructor for sparklines that takes some sensible defaults and merges in the individual
-			     * chart options. This function is also available from the jQuery plugin as $(element).highcharts('SparkLine').
-			     */
-			    Highcharts.SparkLine = function (a, b, c) {
-			        var hasRenderToArg = typeof a === 'string' || a.nodeName,
-			            options = arguments[hasRenderToArg ? 1 : 0],
-			            defaultOptions = {
-			                chart: {
-			                    renderTo: (options.chart && options.chart.renderTo) || this,
-			                    backgroundColor: null,
-			                    borderWidth: 0,
-			                    type: 'area',
-			                    margin: [2, 0, 2, 0],
-			                    width: 120,
-			                    height: 20,
-			                    style: {
-			                        overflow: 'visible'
-			                    },
-			                    skipClone: true
-			                },
-			                title: {
-			                    text: ''
-			                },
-			                exporting: {
-						         enabled: false
-							},
-			                credits: {
-			                    enabled: false
-			                },
-			                xAxis: {
-			                    labels: {
-			                        enabled: false
-			                    },
-			                    title: {
-			                        text: null
-			                    },
-			                    startOnTick: false,
-			                    endOnTick: false,
-			                    tickPositions: []
-			                },
-			                yAxis: {
-			                    endOnTick: false,
-			                    startOnTick: false,
-			                    labels: {
-			                        enabled: false
-			                    },
-			                    title: {
-			                        text: null
-			                    },
-			                    tickPositions: [0]
-			                },
-			                legend: {
-			                    enabled: false
-			                },
-			                tooltip: {
-			                    backgroundColor: null,
-			                    borderWidth: 0,
-			                    shadow: false,
-			                    useHTML: true,
-			                    hideDelay: 0,
-			                    shared: true,
-			                    padding: 0,
-			                    positioner: function (w, h, point) {
-			                        return { x: point.plotX - w / 2, y: point.plotY - h };
-			                    }
-			                },
-			                plotOptions: {
-			                    series: {
-			                        animation: false,
-			                        lineWidth: 1,
-			                        shadow: false,
-			                        states: {
-			                            hover: {
-			                                lineWidth: 1
-			                            }
-			                        },
-			                        marker: {
-			                            radius: 1,
-			                            states: {
-			                                hover: {
-			                                    radius: 2
-			                                }
-			                            }
-			                        },
-			                        fillOpacity: 0.25
-			                    },
-			                    column: {
-			                        negativeColor: '#910000',
-			                        borderColor: 'silver'
-			                    }
-			                }
-			            };
-
-			        options = Highcharts.merge(defaultOptions, options);
-
-			        return hasRenderToArg ?
-			            new Highcharts.Chart(a, options, c) :
-			            new Highcharts.Chart(options, b);
-			    };
-
-			    var start = +new Date(),
-			        $tds = $('td[data-sparkline]'),
-			        fullLen = $tds.length,
-			        n = 0;
-
-			    // Creating 153 sparkline charts is quite fast in modern browsers, but IE8 and mobile
-			    // can take some seconds, so we split the input into chunks and apply them in timeouts
-			    // in order avoid locking up the browser process and allow interaction.
-			    function doChunk() {
-			        var time = +new Date(),
-			            i,
-			            len = $tds.length,
-			            $td,
-			            stringdata,
-			            arr,
-			            data,
-			            chart;
-
-			        for (i = 0; i < len; i += 1) {
-			            $td = $($tds[i]);
-			            stringdata = $td.data('sparkline');
-			            arr = stringdata.split('; ');
-			            data = $.map(arr[0].split(', '), parseFloat);
-			            chart = {};
-
-			            if (arr[1]) {
-			                chart.type = arr[1];
-			            }
-			            $td.highcharts('SparkLine', {
-			                series: [{
-			                    data: data,
-			                    pointStart: 1
-			                }],
-			                tooltip: {
-			                    headerFormat: '<span style="font-size: 10px">' + $td.parent().find('th').html() + ', D{point.x}:</span><br/>',
-			                    pointFormat: '<b>{point.y}</b>'
-			                },
-			                chart: chart
-			            });
-
-			            n += 1;
-
-			            // If the process takes too much time, run a timeout to allow interaction with the browser
-			            if (new Date() - time > 500) {
-			                $tds.splice(0, i + 1);
-			                setTimeout(doChunk, 0);
-			                break;
-			            }
-
-			            // Print a feedback on the performance
-			            if (n === fullLen) {
-			                $('#result').html('Generated ' + fullLen + ' sparklines in ' + (new Date() - start) + ' ms');
-			            }
-			        }
-			    }
-			    doChunk();
-
-			});
-
-			function showDiv(id){
-				if(id == 1) {
-	                document.getElementById('container').style.display = "block"; 
-	                document.getElementById('container1').style.display = "none"; 
-	                document.getElementById('containerDesc').style.display = "block"; 
-	                document.getElementById('container1Desc').style.display = "none"; 
-	            }
-	            if(id == 2) {
-	                document.getElementById('container').style.display = "none"; 
-	                document.getElementById('container1').style.display = "block"; 
-	                document.getElementById('containerDesc').style.display = "none"; 
-	                document.getElementById('container1Desc').style.display = "block"; 
-	            }
-			}
-
-			function setViewFunction() {
-				document.getElementById('container').style.display = "block"; 
-	            document.getElementById('container1').style.display = "none"; 
-	            document.getElementById('containerDesc').style.display = "block"; 
-	            document.getElementById('container1Desc').style.display = "none"; 
-			}
-
-			$(function () {
-			    $('#container2').highcharts({
-			        title: {
-			            text: 'Change of Hispanic Population Proportion'
-			        },
-			        xAxis: {
-			            categories: ['2000', '2008', '2011', '2012']
-			        },
-			        labels: {
-			            items: [{
-			                style: {
-			                    left: '50px',
-			                    top: '18px',
-			                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
-			                }
-			            }]
-			        },
-			        series: [{
-			            type: 'column',
-			            name: 'Bethesda - Chevy Chase',
-			            data: [915, 1030, 1351, 1429]
-			        }, {
-			            type: 'column',
-			            name: 'International Corridor',
-			            data: [20755, 30488, 35793, 35832]
-			        }, {
-			            type: 'column',
-			            name: 'Riverdale - New Carrolton',
-			            data: [4981.5, 9498, 10612, 11525]
-			        }, {
-			            type: 'column',
-			            name: 'Silver Spring',
-			            data: [4314, 4191, 4040, 4419]
-			        }, {
-			            type: 'column',
-			            name: 'University of Maryland',
-			            data: [760, 1857, 1465, 1902]
-			        }, {
-			            type: 'spline',
-			            name: 'Average',
-			            data: [6345, 9410, 10652, 11021],
-			            marker: {
-			                lineWidth: 2,
-			                lineColor: Highcharts.getOptions().colors[3],
-			                fillColor: 'white'
-			            }
-			        }]
-			    });
-			});
-		</script>
+		<script src="js/neighborhood.js"></script>
 		<script>
 			$('#popRate').click(function(e) {
 			    showDiv(2);
@@ -580,6 +325,27 @@
 			    showDiv(1);
 			    e.preventDefault();// prevent the default anchor functionality
 			});
+
+			$('#White').click(function(e) {
+			    showRace(1);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#Black').click(function(e) {
+			    showRace(2);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#Asian').click(function(e) {
+			    showRace(3);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#Hispanic').click(function(e) {
+			    showRace(4);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
 		</script>
 
 	</body>

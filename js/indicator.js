@@ -156,7 +156,7 @@ indicator.directive('outerPath', function(){
                 .attrTween("d", scope.tweenArc({
                     endAngle: end
                 }, arcObject));
-            
+
 
             element.addClass(scope.findPathColor());
         }

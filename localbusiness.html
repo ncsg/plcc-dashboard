@@ -24,6 +24,12 @@
 
 	<body>
 		<div class="container">	
+			<div>
+				<script src="//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js"></script>
+				<script> 
+					umdHeader.init(); 
+				</script>
+			</div>
 			<header id="site-header">
 				<div class="row">
 					<div class="col-md-2 col-sm-5 col-xs-8">
@@ -41,13 +47,19 @@
 
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   								<ul class="nav navbar-nav navbar-right">
-    								<li class="cl-effect-11"><a href="index.html" data-hover="Home">Home</a></li>
     								<li class="cl-effect-11"><a href="neighborhood.html" data-hover="Neighborhood">Neighborhood</a></li>
     								<li class="cl-effect-11"><a href="housing.html" data-hover="Housing">Housing</a></li>
     								<li class="cl-effect-11"><a href="labormarket.html" data-hover="Labor">Labor</a></li>
     								<li class="cl-effect-11"><a href="localbusiness.html" data-hover="Business">Business</a></li>
-    								<li class="cl-effect-11"><a href="gentrification.html" data-hover="Gentrification">Gentrification</a></li>
-    								<li class="cl-effect-11"><a href="http://wikimapping.com/wikimap/PurpleLine.html" target= "_blank" data-hover="Crowdsourcing">Crowdsourcing</a></li>
+    								
+  										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-top: -1%">Tools
+    										<span class="caret"></span>
+  										</button>
+    									<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    										<li><a href="https://nfinio.cartodb.com/viz/119713e2-83c9-11e5-acac-0e787de82d45/public_map"  target= "_blank" data-hover="Gentrification" style="font-size: 14px !important; margin-left: 8px !important;">Gentrification</a></li>
+    										<li><a href="http://wikimapping.com/wikimap/PurpleLine.html" target= "_blank" data-hover="Crowdsourcing" style="font-size: 14px !important; margin-left: 8px !important;">Crowdsourcing</a></li>
+    									</ul>
+    							
   								</ul>
 							</div><!-- /.navbar-collapse -->
 						</nav>
@@ -70,16 +82,7 @@
 				<div class="row">
 					<main class="col-md-12">
 						<div class="row">
-							<div class="col-md-8"><img src="img/map.png" style="width: 100%;"></img></div>
-							<div class="col-md-4" style="border: 1px groove #673AB7; padding-top: 5px;">
-								Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour which don’t look even slightly.
-								<hr style="margin-bottom: 12px !important; margin-top: 12px !important;">
-								<div style="text-align: center;">
-									<img src="img/trend.png" style="width: 80%;"></img>
-								</div>
-							</div>
-							
-							<div class="col-md-1"></div>
+						</div>
 					</main>
 				</div>
 			</div>

@@ -19,11 +19,19 @@
 	    <script src="js/pace.min.js"></script>
 	    <script src="js/modernizr.custom.js"></script>
 	    <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+	    <script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
 
 	</head>
 
 	<body>
 		<div class="container">	
+			<div>
+				<script src="//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js"></script>
+				<script> 
+					umdHeader.init(); 
+				</script>
+			</div>
 			<header id="site-header">
 				<div class="row">
 					<div class="col-md-2 col-sm-5 col-xs-8">
@@ -41,13 +49,19 @@
 
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   								<ul class="nav navbar-nav navbar-right">
-    								<li class="cl-effect-11"><a href="index.html" data-hover="Home">Home</a></li>
     								<li class="cl-effect-11"><a href="neighborhood.html" data-hover="Neighborhood">Neighborhood</a></li>
     								<li class="cl-effect-11"><a href="housing.html" data-hover="Housing">Housing</a></li>
     								<li class="cl-effect-11"><a href="labormarket.html" data-hover="Labor">Labor</a></li>
     								<li class="cl-effect-11"><a href="localbusiness.html" data-hover="Business">Business</a></li>
-    								<li class="cl-effect-11"><a href="gentrification.html"  data-hover="Gentrification">Gentrification</a></li>
-    								<li class="cl-effect-11"><a href="http://wikimapping.com/wikimap/PurpleLine.html" target= "_blank" data-hover="Crowdsourcing">Crowdsourcing</a></li>
+    								
+  										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-top: -1%">Tools
+    										<span class="caret"></span>
+  										</button>
+    									<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    										<li><a href="https://nfinio.cartodb.com/viz/119713e2-83c9-11e5-acac-0e787de82d45/public_map"  target= "_blank" data-hover="Gentrification" style="font-size: 14px !important; margin-left: 8px !important;">Gentrification</a></li>
+    										<li><a href="http://wikimapping.com/wikimap/PurpleLine.html" target= "_blank" data-hover="Crowdsourcing" style="font-size: 14px !important; margin-left: 8px !important;">Crowdsourcing</a></li>
+    									</ul>
+    							
   								</ul>
 							</div><!-- /.navbar-collapse -->
 						</nav>
@@ -67,13 +81,132 @@
 
 		<div class="content-body">
 			<div class="container">
-				<div class="row">
-					<main class="col-md-12">
-						<div class="row">
-							<div class="col-md-1"></div>
-							<div class='tableauPlaceholder' style='width: 954px; height: 669px;'><noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MarketDashboard_0&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='954' height='669' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='MarketDashboard_0&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MarketDashboard_0&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
-							<div class="col-md-1"></div>
+				<main class="col-md-12">
+						<h2 class="title">Labor Market</h2>
 					</main>
+					<div class="row">
+						<div class="col-md-4" style="margin-left: 4%;">
+							Building a Thriving Labor Market in the neighborhood: 1. Align workforce development and employer demand. 2. Build stronger demand-driven training partnerships based on business needs, including the EARN Maryland program. 3.Align existing community plans for recreation, housing, retail and more, with needs and opportunities along the Purple Line. 4. Map and develop career pathways and plan for the types of jobs coming, in addition to construction jobs.
+						</div>
+						<div class="col-md-2">
+							<div class="kpi-item kpi-growth" style="margin-left: 10%;">
+      							<div class="kpi-header">
+        							<h3>Labor Market 1</h3>
+      							</div>
+     	 						<div class="kpi-body">
+        							<p class="kpi-details-tl"></p>
+        							<p class="kpi-text red">XXX</p>
+        							<p class="kpi-details-tr">YTD</p>
+						    	</div>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="kpi-item kpi-growth" style="margin-left: 30%;">
+      							<div class="kpi-header">
+        							<h3>Labor Market 2</h3>	
+      							</div>
+     	 						<div class="kpi-body">
+        							<p class="kpi-details-tl"></p>
+        							<p class="kpi-text green">XXX</p>
+        							<p class="kpi-details-tr">YTD</p>
+						    	</div>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="kpi-item kpi-growth" style="margin-left: 50%;">
+      							<div class="kpi-header">
+        							<h3>Labor Market 3</h3>	
+      							</div>
+     	 						<div class="kpi-body">
+        							<p class="kpi-details-tl"></p>
+        							<p class="kpi-text yellow">XXX</p>
+        							<p class="kpi-details-tr">YTD</p>
+						    	</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-5">
+						<div id="subareaEducation" style="min-width: 300px; height: 440px; margin: 0 auto"></div>
+						</div>
+					<div class="col-md-7">
+					<!--div id="result"></div-->
+						<table id="table-sparkline" style="margin-left: 2%;">
+						    <thead>
+						        <tr style="background-color: gainsboro;">
+						            <th>Subarea</th>
+						            <th>Unemployment Rate (2000) </th>
+						            <th>Unemployment Trend</th>
+						            <th>Unemployment Rate (2014)</th>
+						            <th>Periodic Unemployment Change</th>
+						            <th>Overall Unemployment Change</th>
+						        </tr>
+						    </thead>
+						    <tbody id="tbody-sparkline">
+						        <tr>
+						            <th>Bethesda - Chevy Chase</th>
+						            <td>2.09%</td>
+						            <td data-sparkline="2.089698155, 4.392956441, 3.116007564, 2.846655791 "/>
+						            <td>2.84%</td>
+						            <td data-sparkline="2.303258286, -1.276948877, -0.269351773 ; column"/>
+						            <td><img src="img/up.png" style="width:10%"> 0.76%</td>
+						        </tr>
+						        <tr>
+						            <th>Silver Spring</th>
+						            <td>3.26%</td>
+						            <td data-sparkline="3.260924861, 4.895426339, 5.724016249, 6.456816678 "/>
+						            <td>6.46%</td>
+						            <td data-sparkline="1.634501478, 0.82858991, 0.732800429; column"/>
+						            <td><img src="img/up.png" style="width:10%"> 3.19%</td>
+						        </tr>
+						        <tr>
+						            <th>International Corridor</th>
+						            <td>6.14%</td>
+						            <td data-sparkline="6.142164268, 10.76649816, 10.85289826, 9.114837729 "/>
+						            <td>9.11%</td>
+						            <td data-sparkline="4.624333887, 0.086400105, -1.738060531 ; column"/>
+						            <td><img src="img/up.png" style="width:10%"> 2.97%</td>
+						        </tr>
+						        <tr>
+						            <th>University of Maryland</th>
+						            <td>7.02%</td>
+						            <td data-sparkline="7.024968261, 10.09564293, 12.49195106, 11.80151025 "/>
+						            <td>11.80%</td>
+						            <td data-sparkline="3.070674672, 2.396308127, -0.690440812 ; column"/>
+						            <td><img src="img/up.png" style="width:10%"> 4.77%</td>
+						        </tr>
+						        <tr>
+						            <th>Riverdale - New Carrolton</th>
+						            <td>7.10%</td>
+						            <td data-sparkline="7.10181721, 11.41525917, 12.00711703, 10.6049737 "/>
+						            <td>48.40%</td>
+						            <td data-sparkline="4.313441963, 0.591857857, -1.402143333; column"/>
+						            <td><img src="img/up.png" style="width:10%"> 3.50%</td>
+						        </tr>
+						        <tr style="background-color: gainsboro;">
+						            <th>Total Unemployment Change</th>
+						            <td>5.16%</td>
+						            <td data-sparkline="5.161787365, 8.764103636, 9.03337625, 8.195515984 "/>
+						            <td>8.19%</td>
+						            <td data-sparkline="3.602316271, 0.269272614, -0.837860266 ; column"/>
+						            <td><img src="img/up.png" style="width:10%"> 3.03%</td>
+						        </tr>
+						    </tbody>
+						</table>
+						<div id="tableDesc" style="margin-top: 3%;">Denotations: D1 - Year 2000, D2 - Year 2006 to 2010, D3 - Year 2009 to 2013, D4 - Year 2010 to 2014. If you hover over the sparkline for unemployment trend, you can see the value in each division. Unemployment Change column depicts change in population per division.</div>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-12" style="text-align: center;">
+						<h3>Demographic Trends in the Labor Market</h3>
+					</div>
+					<div class="col-md-5">
+						<div id="laborByAge" style="min-width: 310px; height: 350px; margin: 0 auto"></div>
+					</div>
+					<div class="col-md-7">
+						<div id="compareDiv" style="min-width: 310px; height: 350px; margin: 0 auto"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -101,8 +234,23 @@
 				</ul>
 			</nav>
 		</div>
-
 		<script src="js/script.js"></script>
+		<script src="js/labor.js"></script>
+		<script>
+			$('#1').click(function(e) {
+			    showDiv(1);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
 
+			$('#2').click(function(e) {
+			    showDiv(2);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#3').click(function(e) {
+			    showDiv(3);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+		</script>
 	</body>
 </html>
