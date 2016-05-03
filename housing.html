@@ -26,13 +26,13 @@
 
 	</head>
 
-	<body>
+	<body onload="setViewFunction()">
 		<div class="container">	
 			<div>
-				<script src="//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js"></script>
+				<!--script src="//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js"></script>
 				<script> 
 					umdHeader.init(); 
-				</script>
+				</script-->
 			</div>
 			<header id="site-header">
 				<div class="row">
@@ -85,55 +85,100 @@
 		<div class="content-body">
 			<div class="container">
 					<main class="col-md-12">
-						<h2 class="title">Housing Trends</h2>
+						<h2>Housing Trends in the Purple Line Corridor</h2>
+						<i><h4>~Ensuring Housing Choices for All~</h4></i>
 					</main>
 					<div class="row">
-						<div class="col-md-4" style="margin-left: 4%;">
-							Housing for All Along the Purple Line: 1. Identify and address the potential impacts of the line such as gentrification, displacement and loss of housing affordable to the community, while supporting benefits such as increased accessibility to transit. 2. Provide housing that matches market needs. 3. Engage in strategic planning, identify current and future residents. 4. Identify policy tools for inclusion. 
+						<div class="col-md-5">
+							<b>Goal:</b> Balanced housing options for people of all income levels in communities throughout the corridor.<br>
+							<b>Strategies:</b><br> 
+							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingOne">
+							      <h4 class="panel-title">
+							        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+							          Build and maintain a thriving and balanced housing market serving a mix of incomes and offering a range of housing types
+							        </a>
+							      </h4>
+							    </div>
+							    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+							      <div class="panel-body">
+							        <ul>
+							        	<li>Develop and publish corridor-wide strategic housing plan</li>
+							        	<li>Land acquisition for residential development</li>
+							        	<li>Encourage Private and philanthropic investment</li>
+							        </ul>
+							      </div>
+							    </div>
+							  </div>
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingTwo">
+							      <h4 class="panel-title">
+							        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							          Mitigate market disruptions with adverse impacts on existing residents
+							        </a>
+							      </h4>
+							    </div>
+							    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							      <div class="panel-body">
+							      	<ul>
+							      		<li>Maintain housing affordability and improve existing housing along the corridor</li>
+							      		<li>Promote quality housing that is affordable to the existing community while affirmatively addressing the impact on residential displacement</li>
+							      		<li>Create a housing trust fund. Adopt innovative financial strategies</li>
+							      	</ul>
+							      </div>
+							    </div>
+							  </div>
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingThree">
+							      <h4 class="panel-title">
+							        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseThree">
+							          Foster home ownership opportunities throughout the corridor
+							        </a>
+							      </h4>
+							    </div>
+							  </div>
+							</div>
 						</div>
 						<div class="col-md-2">
 							<div class="kpi-item kpi-growth" style="margin-left: 10%;">
       							<div class="kpi-header">
-        							<h3>Increase in Housing Units</h3>
+        							<h3>Largest Change in Housing Units</h3>
       							</div>
      	 						<div class="kpi-body">
-        							<p class="kpi-details-tl"></p>
-        							<p class="kpi-text red">XXX</p>
-        							<p class="kpi-details-tr">YTD</p>
+        							<p class="kpi-details-tl">University of Maryland</p>
+        							<p class="kpi-text"><img src="img/up.png" style="width:13%">7,385</p>
 						    	</div>
 							</div>
 						</div>
 						<div class="col-md-2">
 							<div class="kpi-item kpi-growth" style="margin-left: 30%;">
       							<div class="kpi-header">
-        							<h3>Total Number of housing units</h3>	
+        							<h3>Largest Change in Rent</h3>	
       							</div>
      	 						<div class="kpi-body">
-        							<p class="kpi-details-tl"></p>
-        							<p class="kpi-text green">XXX</p>
-        							<p class="kpi-details-tr">YTD</p>
+        							<p class="kpi-details-tl">Silver Spring</p>
+        							<p class="kpi-text"><img src="img/up.png" style="width:13%">$493.55</p>
 						    	</div>
 							</div>
 						</div>
 						<div class="col-md-2">
 							<div class="kpi-item kpi-growth" style="margin-left: 50%;">
       							<div class="kpi-header">
-        							<h3>Total Number of housing units</h3>	
+        							<h3>Largest Change in Ownership Rate</h3>	
       							</div>
      	 						<div class="kpi-body">
-        							<p class="kpi-details-tl"></p>
-        							<p class="kpi-text yellow">XXX</p>
-        							<p class="kpi-details-tr">YTD</p>
+        							<p class="kpi-details-tl">University of Maryland</p>
+        							<p class="kpi-text"><img src="img/down.png" style="width:13%">8.5%</p>
 						    	</div>
 							</div>
 						</div>
 					</div>
 						<div class="row">
-							<div class="col-md-4">
+							<div class="col-md-5">
 								<div id="housingByType" style="min-width: 100%; height: 400px; margin: 0 auto"></div>
 							</div>
-							<div class="col-md-8">
-							<div id="result"></div>
+							<div class="col-md-7">
 								<table id="table-sparkline" style="margin-left: 7%;">
 								    <thead>
 								        <tr style="background-color: gainsboro;">
@@ -142,7 +187,7 @@
 								            <th>House Price Trend</th>
 								            <th>Median Housing Price (2014)</th>
 								            <th>Periodic Housing Price Change</th>
-								            <th>Housing Price Change</th>
+								            <th>2014 - 2000 Change</th>
 								        </tr>
 								    </thead>
 								    <tbody id="tbody-sparkline">
@@ -199,12 +244,37 @@
 								<div id="tableDesc" style="margin-top: 3%; margin-left: 7%;">Denotations: D1 - Year 2000, D2 - Year 2006 to 2010, D3 - Year 2009 to 2013, D4 - Year 2010 to 2014. If you hover over the sparkline for Ownership trend, you can see the value in each division. Ownership Change column depicts change in population per division.</div>
 							</div>
 						</div>
-						<div class="row padding-top">
-							<div class="col-md-6">
+						<hr>
+						<div class="row ">
+							<div class="col-md-4">
 								<div id="compareHouseDiv" style="min-width: 100%; height: 400px; margin: 0 auto"></div>
 							</div>
+							<div class="col-md-8">
+								<div id="housingByCategory" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="col-md-12">
+								<div style="text-align: right">
+									<div class="dropdown">
+						  				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select a Subarea
+						  				<span class="caret"></span></button>
+						  				<ul class="dropdown-menu dropdown-menu-right">
+						  					<li><a href="#" id="Renter1B">One Bedroom Rental Housing</a></li>
+						    				<li><a href="#" id="Renter2B">Two Bedroom Rental Housing</a></li>
+						    				<li><a href="#" id="Renter3B">Three Bedroom Rental Housing</a></li>
+						  				</ul>
+									</div>
+								</div>
+							</div>
 							<div class="col-md-6">
-								<div id="container1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								<div id="affordableOwner" style="min-width: 100%; height: 400px; margin: 0 auto"></div>
+							</div>
+							<div class="col-md-6">
+								<div id="affordableRenter1B" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								<div id="affordableRenter2B" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								<div id="affordableRenter3B" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 							</div>
 						</div>
 				</div>
@@ -240,6 +310,23 @@
 
 		<script src="js/script.js"></script>
 		<script src="js/housing.js"></script>
+
+		<script>
+			$('#Renter1B').click(function(e) {
+			    showDiv(1);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#Renter2B').click(function(e) {
+			    showDiv(2);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#Renter3B').click(function(e) {
+			    showDiv(3);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+		</script>
 
 	</body>
 </html>

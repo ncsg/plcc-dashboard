@@ -33,10 +33,10 @@
 	<body onload="setViewFunction()">
 		<div class="container">	
 			<div>
-				<script src="//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js"></script>
+				<!--script src="//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js"></script>
 				<script> 
 					umdHeader.init(); 
-				</script>
+				</script-->
 			</div>
 			<header id="site-header">
 				<div class="row">
@@ -88,12 +88,71 @@
 		<div class="content-body">
 			<div class="container">
 				<main class="col-md-12">
-					<h2 class="title">Neighborhood Identities</h2>
+					<h2>Neighborhood Trends in the Purple Line Corridor</h2>
+					<i><h4>~Celebrating Neighborhood Identities~</h4></i>
 				</main>
 				<div class="row">
-					<div class="col-md-4" style="margin-left: 4%;">
-						<p style="text-align: center">Neighborhood identities include demographic composition and physical environment features. The Purple Line corridor has a diverse population.Between XX and XX, the total population increased by XX, the proportion of African American population increased/decreased by XX, and that of the Hispanic populatrion increased/decreased by XX.</p>					
-					</div>
+					<div class="col-md-5">
+							<b>Goal:</b> Vibrant and sustainable environments that enhance community health, culture, and sense of place.<br>
+							<b>Strategies:</b><br> 
+							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingOne">
+							      <h4 class="panel-title">
+							        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+							          Build, preserve and sustain thriving neighborhoods
+							        </a>
+							      </h4>
+							    </div>
+							    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+							      <div class="panel-body">
+							        <ul>
+							        	<li>Sustain and enhance walker and bicycle access near stations</li>
+							        	<li>Personal Safety of transit users, walkers, cyclists</li>
+							        	<li>Parks, public spaces and recreational opportunities</li>
+							        	<li>Healthy natural environment</li>
+							        </ul>
+							      </div>
+							    </div>
+							  </div>
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingTwo">
+							      <h4 class="panel-title">
+							        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+										Preserve neighborhood culture and character
+									</a>
+							      </h4>
+							    </div>
+							    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							      <div class="panel-body">
+							      	<ul>
+							      		<li>Preserve and enhance neighborhood culture and identity</li>
+										<li>Enhance the physical appearance of communities</li>
+										<li>Facilitate transit-oriented development that complements and supports the existing community while minimizing displacement</li>
+										<li>Strengthen community input related to the Purple Line and planning and development within the corridor</li>
+							      	</ul>
+							      </div>
+							    </div>
+							  </div>
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingThree">
+							      <h4 class="panel-title">
+							        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							        	Minimize neighborhood disruption during and after construction
+							        </a>
+							      </h4>
+							    </div>
+							    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+							      <div class="panel-body">
+							      	<ul>
+							      		<li>Minimize neighborhood disruption during construction</li>
+							      		<li>Minimize neighborhood disruption after construction</li>
+							      	</ul>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
 						<div class="col-md-2">
 							<div class="kpi-item kpi-growth" style="margin-left: 10%;">
       							<div class="kpi-header">
@@ -101,7 +160,7 @@
       							</div>
      	 					<div class="kpi-body">
         						<p class="kpi-details-tl">University of Maryland</p>
-        						<p class="kpi-text">14,069</p>
+        						<p class="kpi-text"><img src="img/up.png" style="width:13%">14,069</p>
 						    </div>
     					</div>
     				</div>
@@ -111,19 +170,19 @@
         							<h3>Highest Non-White Population Change</h3>
       							</div>
       							<div class="kpi-body">
-        							<p class="kpi-details-tl"> Internation Corridor</p>
-        							<p class="kpi-text">12,082</p>
+        							<p class="kpi-details-tl"> International Corridor</p>
+        							<p class="kpi-text"><img src="img/up.png" style="width:13%">12,082</p>
       							</div>
     						</div>
     					</div>
 						<div class="col-md-2">
 							<div class="kpi-item kpi-growth" style="margin-left: 50%;">
       							<div class="kpi-header">
-        							<h3>Highest Household Income</h3>
+        							<h3>Highest Median Household Income</h3>
       							</div>
       							<div class="kpi-body">
         							<p class="kpi-details-tl">Bethesda</p>
-        							<p class="kpi-text">151,449</p>
+        							<p class="kpi-text"><img src="img/up.png" style="width:13%">151,449</p>
       							</div>
     						</div>
 						</div>
@@ -132,7 +191,7 @@
 						<div class="col-md-5">
 							<div style="text-align: right">
 							<div class="dropdown">
-							  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select an option
+							  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select an option
 							  <span class="caret"></span></button>
 							  <ul class="dropdown-menu dropdown-menu-right">
 							    <li><a href="#" id="popShare">Population Share</a></li>
@@ -147,7 +206,6 @@
 						</div>
 						
 						<div class="col-md-7">
-							<div id="result" style="margin-top: 4%;"></div>
 								<table id="table-sparkline" style="margin-left: 7%;">
 								    <thead>
 								        <tr style="background-color: gainsboro;">
@@ -216,19 +274,12 @@
 						</div>
 						<hr>
 						<div class="row">
-							<div class="col-md-5">
-								<div id="containerWhite" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-								<div id="containerBlack" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-								<div id="containerAsian" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-								<div id="containerHispanic" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-							</div>
-							<div class="col-md-7">
-								<div class="col-md-3">
-									<div style="text-align: right">
+							<div class="col-md-6">
+								<div style="text-align: right">
 										<div class="dropdown">
-							  				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select a race
+							  				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select a race
 							  				<span class="caret"></span></button>
-							  				<ul class="dropdown-menu">
+							  				<ul class="dropdown-menu dropdown-menu-right">
 							    				<li><a href="#" id="White">White</a></li>
 							    				<li><a href="#" id="Black">Black</a></li>
 							    				<li><a href="#" id="Asian">Asian</a></li>
@@ -236,32 +287,38 @@
 							  				</ul>
 										</div>
 									</div>
-								</div>
-								<div class="col-md-9" id="titleWhite">
-									<h4>White Population Trends</h4>
-									<hr>
-								</div>
-								<div class="col-md-9" id="titleBlack">
-									<h4>Black Population Trends</h4>
-									<hr>
-								</div>
-								<div class="col-md-9" id="titleAsian">
-									<h4>Asian Population Trends</h4>
-									<hr>
-								</div>
-								<div class="col-md-9" id="titleHispanic">
-									<h4>Hispanic Population Trends</h4>
-									<hr>
-								</div>
-								
-								<div class="row">
-									<div class="col-md-12">
-										The visualization talks about the trends in the change of Hispanic population in the Purple Line Neighborhood from 2000 to 2014. The spline shows an average trend in the change of population. The International Corridor holds maximum Hispanic occupancy. Looking closely at the trands, Hispanic population in Silver Spring and University of Maryland regions experienced a drop from 2008 to 2011. 
-										<br>The spline shows a considerable increase in Hispanic population from 2000 to 2008 and a gradual increase since then until 2014.
-									</div>
-								</div>
 							</div>
-						
+							<div class="col-md-6">
+								<div style="text-align: right">
+										<div class="dropdown">
+							  				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select a group
+							  				<span class="caret"></span></button>
+							  				<ul class="dropdown-menu dropdown-menu-right">
+							  					<li><a href="#" id="group1">Less than $49,999</a></li>
+							    				<li><a href="#" id="group2">$50,000 to $99,999</a></li>
+							    				<li><a href="#" id="group3">$100,000 to $149,999</a></li>
+							    				<li><a href="#" id="group4">$150,000 to $199,999</a></li>
+							    				<li><a href="#" id="group5">$200,000 and more</a></li>
+							  				</ul>
+										</div>
+									</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div id="containerWhite" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								<div id="containerBlack" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								<div id="containerAsian" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								<div id="containerHispanic" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+							</div>
+							<div class="col-md-6">
+								<div id="incomeByGroup1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								<div id="incomeByGroup2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								<div id="incomeByGroup3" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								<div id="incomeByGroup4" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								<div id="incomeByGroup5" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+							</div>	
+						</div>				
 						<hr>
 						<div class="row">
 							<div class="col-md-12">
@@ -340,6 +397,31 @@
 
 			$('#Hispanic').click(function(e) {
 			    showRace(4);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#group1').click(function(e) {
+			    showGroup(1);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#group2').click(function(e) {
+			    showGroup(2);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#group3').click(function(e) {
+			    showGroup(3);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#group4').click(function(e) {
+			    showGroup(4);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#group5').click(function(e) {
+			    showGroup(5);
 			    e.preventDefault();// prevent the default anchor functionality
 			});
 

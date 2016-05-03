@@ -31,12 +31,12 @@
 
 	</head>
 
-	<body ng-app="indicator">
+	<body onload="setViewFunction()">
 		<div>
-			<script src="//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js"></script>
+			<!--script src="//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js"></script>
 			<script> 
 				umdHeader.init(); 
-			</script>
+			</script-->
 		</div>
 		<div class="container">	
 			<header id="site-header">
@@ -90,41 +90,59 @@
 			<div class="container">
 				<div class="row">
 					<main class="col-md-12">
-						<h2>Purple Line Corridor: Beyond the Tracks</h2>
+						<h2>Welcome to the Purple Line Corridor Coalition Website</h2>
 						<article class="post">
 							<div class="entry-content clearfix">
-								<div class="col-md-8" style="padding-left: 0px !important; padding-right: 0px !important;">
-									<img class="img-responsive" src="img/purplelinemap.jpg" alt="Developer Image">
+								<div class="col-md-8" style="padding-left: 0px !important; padding-right: 0px !important; text-align: center;">
+									<img class="img-responsive" src="img/HomepageBanner.png" alt="Developer Image">
 								</div>
 								<div class="col-md-4 col-xs-12">					
 									<!-- start feedwind code --><script type="text/javascript">document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');</script><script type="text/javascript">(function() {var params = {rssmikle_url: "https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&q=purple+line+metro+maryland&output=rss",rssmikle_frame_width: "300",rssmikle_frame_height: "355",frame_height_by_article: "0",rssmikle_target: "_blank",rssmikle_font: "Arial, Helvetica, sans-serif",rssmikle_font_size: "12",rssmikle_border: "off",responsive: "off",rssmikle_css_url: "",text_align: "left",text_align2: "left",corner: "off",scrollbar: "on",autoscroll: "on",scrolldirection: "up",scrollstep: "3",mcspeed: "20",sort: "Off",rssmikle_title: "on",rssmikle_title_sentence: "Purple Line Metro News",rssmikle_title_link: "",rssmikle_title_bgcolor: "#0D060F",rssmikle_title_color: "#FFFFFF",rssmikle_title_bgimage: "",rssmikle_item_bgcolor: "#FFFFFF",rssmikle_item_bgimage: "",rssmikle_item_title_length: "55",rssmikle_item_title_color: "#5E2B6E",rssmikle_item_border_bottom: "on",rssmikle_item_description: "on",item_link: "off",rssmikle_item_description_length: "150",rssmikle_item_description_color: "#666666",rssmikle_item_date: "gl1",rssmikle_timezone: "Etc/GMT",datetime_format: "%b %e, %Y %l:%M %p",item_description_style: "text+tn",item_thumbnail: "full",item_thumbnail_selection: "auto",article_num: "15",rssmikle_item_podcast: "off",keyword_inc: "",keyword_exc: ""};feedwind_show_widget_iframe(params);})();</script><div style="font-size:10px; text-align:center; width:300px;"><a href="http://feed.mikle.com/" target="_blank" style="color:#CCCCCC;">RSS Feed Widget</a><!--Please display the above link in your web page according to Terms of Service.--></div><!-- end feedwind code --><!--  end  feedwind code -->
 								</div>
 								<div class="row">
 									<div class="col-md-12" style="margin-top: 1%;">
-										<h2 style="text-align: center;">Welcome to the Purple Line Corridor Coalition Website</h2>
-										<hr>
-										<p style="text-align: center;">To ensure equitable and sustainable development along the Purple Line corridor, the Purple Line Corridor Coalition was founded in 2012. One major work of the PLCC is the Purple Line Community Compact, which a commitment by its signatories to work together to achieve a long-term vision for a prosperous, equitable, and environmentally sustainable Purple Line corridor. This Purple Line Dashboard is created to monitor major goals set in the Community Compact. The Dashboard includes five parts, the highlight page, local business, labor market, housing choices, and neighborhood. The four buckets below represent the PLCC’s primary focus: <b>(1) Supporting and Growing Local Businesses. (2) Building a Thriving Labor Market. (3) Ensuring Housing Choices for All. (4) Celebrating Neighborhood Identities.</b></p>
+										<p style="text-align: center;">Welcome to the <b>Purple Line Dashboard</b>. Here you can <b>explore demographic, economic, employment and housing trends in the corridor with this pilot tool designed to help measure and monitor progress toward the Purple Line Community Compact</b>. The Compact is a commitment by its signatories to work together to achieve a long-term vision for a prosperous, equitable, and environmentally sustainable Purple Line corridor. A public signing and release of the compact is expected this summer. This site provides baseline data to see where the corridor is now in four major goal areas. <a href=" http://www.smartgrowth.umd.edu/plcompact"><u><b>Learn more.</b></u></a></b></p>
 									</div>
 								</div>
 								<div class="row">
 									<div class="height-40px"></div>
-									<h2 class="title text-center" style="margin-bottom: 0px !important;">Neighborhood by the Numbers</h2>
+									<h2 class="title text-center" style="margin-bottom: 0px !important;">Purple Line Corridor by the Numbers</h2>
 									<div class="col-md-12" style="text-align: left;font-size: 14px;text-align: -webkit-right;">
 										<h4>(Figures represent %change of each from 2006-2010 to 2010-2014)</h4>
 									</div>
 								</div>
 								<div class="row">
+									<div class="col-md-4" style="text-align: center;">
+										<h4>Select a subarea to change the meters and trends</h4><br>
+										<button class="btn btn-default" type="button" id="Corridor">Neighborhood</button><br><br>
+										<button class="btn btn-default" type="button" id="B">Bethesda - Chevy Chase</button><br><br>
+										<button class="btn btn-default" type="button" id="SS">Silver Spring</button><br><br>
+										<button class="btn btn-default" type="button" id="IC">International Corridor</button><br><br>
+										<button class="btn btn-default" type="button" id="UM">University of Maryland</button><br><br>
+										<button class="btn btn-default" type="button" id="RC">Riverdale - New Carrollton</button><br><br>
+									</div>
+									<div class="col-md-8">
+										<div id="trendCorridor" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+										<div id="trendBethesda" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+										<div id="trendSS" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+										<div id="trendIC" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+										<div id="trendUM" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+										<div id="trendRiverdale" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+									</div>
+								</div>
+								<hr>
+								<div class="row" id="corridorData">
 									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
 										<div id="populationContainer" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
 										<p>Population <img src="img/up.png" style="width:5%"></p>
 									</div>
 									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
 									   <div id="householdContainer" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
-									    <p>Household Income <img src="img/down.png" style="width:5%"></p>
+									    <p>Median Household Income <img src="img/down.png" style="width:5%"></p>
 									</div>
 									<div class="col-md-4" style="text-align: center;">
 									    <div id="unemploymentContainer" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
-									    <p>Unemployment <img src="img/up.png" style="width:5%"></p>
+									    <p>Unemployment Rate<img src="img/up.png" style="width:5%"></p>
 									</div>
 									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
 									    <div id="housingContainer" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
@@ -139,11 +157,141 @@
 									    <p>Median Housing Rent <img src="img/down.png" style="width:5%"></p>
 									</div>
 								</div>
+								<div class="row" id="BData">
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+										<div id="populationContainerB" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+										<p>Population <img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									   <div id="householdContainerB" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Median Household Income <img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center;">
+									    <div id="unemploymentContainerB" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Unemployment Rate<img src="img/down.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									    <div id="housingContainerB" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Housing Units <img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									    <div id="housingValueContainerB" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Median Housing Value <img src="img/down.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center;">
+									   	<div id="housingRentContainerB" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Median Housing Rent <img src="img/down.png" style="width:5%"></p>
+									</div>
+								</div>
+								<div class="row" id="SSData">
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+										<div id="populationContainerSS" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+										<p>Population <img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									   <div id="householdContainerSS" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Median Household Income <img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center;">
+									    <div id="unemploymentContainerSS" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Unemployment Rate<img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									    <div id="housingContainerSS" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Housing Units <img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									    <div id="housingValueContainerSS" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Median Housing Value <img src="img/down.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center;">
+									   	<div id="housingRentContainerSS" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Median Housing Rent <img src="img/up.png" style="width:5%"></p>
+									</div>
+								</div>
+								<div class="row" id="ICData">
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+										<div id="populationContainerIC" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+										<p>Population <img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									   <div id="householdContainerIC" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Median Household Income <img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center;">
+									    <div id="unemploymentContainerIC" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Unemployment Rate<img src="img/down.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									    <div id="housingContainerIC" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Housing Units <img src="img/down.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									    <div id="housingValueContainerIC" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Median Housing Value <img src="img/down.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center;">
+									   	<div id="housingRentContainerIC" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Median Housing Rent <img src="img/up.png" style="width:5%"></p>
+									</div>
+								</div>
+								<div class="row" id="UMData">
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+										<div id="populationContainerUM" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+										<p>Population <img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									   <div id="householdContainerUM" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Median Household Income <img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center;">
+									    <div id="unemploymentContainerUM" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Unemployment Rate<img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									    <div id="housingContainerUM" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Housing Units <img src="img/down.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									    <div id="housingValueContainerUM" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Median Housing Value <img src="img/down.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center;">
+									   	<div id="housingRentContainerUM" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Median Housing Rent <img src="img/up.png" style="width:5%"></p>
+									</div>
+								</div>
+								<div class="row" id="RCData">
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+										<div id="populationContainerRC" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+										<p>Population <img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									   <div id="householdContainerRC" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Median Household Income <img src="img/up.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center;">
+									    <div id="unemploymentContainerRC" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Unemployment Rate<img src="img/down.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									    <div id="housingContainerRC" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Housing Units <img src="img/down.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center; border-right: 1px dotted #555;">
+									    <div id="housingValueContainerRC" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Median Housing Value <img src="img/down.png" style="width:5%"></p>
+									</div>
+									<div class="col-md-4" style="text-align: center;">
+									   	<div id="housingRentContainerRC" style="min-width: 230px; max-width: 150px; height: 150px; margin: 0 auto"></div>
+									    <p>Median Housing Rent <img src="img/up.png" style="width:5%"></p>
+									</div>
+								</div>
 								<div class="row">
 									<div class="height-40px"></div>
 									<div class="col-md-6">
 										<h3 class="title text-center">Purple Line Corridor</h3>
-										<p>The Purple Line Corridor Coalition (PLCC) is working to ensure that investments in the MTA’s newly proposed light rail, the Purple Line, will offer the maximum economic, social, and environmental opportunities to the residents and businesses along the corridor. The Purple Line Community Compact will articulate a collective vision for vibrant economic and community development along the 16-mile corridor.</p>
+										<p>The Purple Line Corridor Coalition (PLCC), a multi-sector collaborative formed in 2012, is working to ensure that investments in the Purple Line light rail will offer the maximum economic, social, and environmental opportunities to the residents and businesses along the corridor. The Purple Line Community Compact articulates a collective vision for vibrant economic and community development along the 16-mile corridor. <b><u><a href="http://www.smartgrowth.umd.edu/plcc">See more.</a></b></u></p>
 									</div>
 									<div class="col-md-6">
 										<h3 class="title text-center">About NCSG</h3>
@@ -185,14 +333,16 @@
 			<button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
 			<nav>
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="full-width.html">Blog</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="index.html" data-hover="Home">Home</a></li>
+					<li><a href="neighborhood.html" data-hover="Neighborhood">Neighborhood</a></li>
+					<li><a href="housing.html" data-hover="Housing">Housing</a></li>
+					<li><a href="labormarket.html" data-hover="Labor">Labor</a></li>
+					<li><a href="localbusiness.html" data-hover="Business">Business</a></li>
+					<li><a href="https://nfinio.cartodb.com/viz/119713e2-83c9-11e5-acac-0e787de82d45/public_map"  target= "_blank" data-hover="Gentrification">Gentrification</a></li>
+					<li class="cl-effect-11"><a href="http://wikimapping.com/wikimap/PurpleLine.html" target= "_blank" data-hover="Crowdsourcing">Crowdsourcing</a></li>
 				</ul>
 			</nav>
 		</div>
-		<script type="text/javascript" src="js/indicator.js"></script>
 		<script src="js/script.js"></script>
 		<script type="text/javascript">
 		    $(function () {
@@ -211,31 +361,43 @@
 		    });
 		</script>
 		
-		
+		<script>
+			$('#B').click(function(e) {
+			    showDiv(1);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#SS').click(function(e) {
+			    showDiv(2);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#IC').click(function(e) {
+			    showDiv(3);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#UM').click(function(e) {
+			    showDiv(4);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#RC').click(function(e) {
+			    showDiv(5);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+
+			$('#Corridor').click(function(e) {
+			    showDiv(6);
+			    e.preventDefault();// prevent the default anchor functionality
+			});
+		</script>
     <!-- 
         So we can test this locally without running a server
         otherwise it tries to make an XMLHttpRequest.
 
         CONS: Not cached.
      -->
-     <script type="text/ng-template" id="indicator.html">
-        <svg class="indicator-circle" 
-            width="150" height="150" 
-            version="1.1" 
-            xmlns="http://www.w3.org/2000/svg">
-            <g>
-                <circle cx="50%" cy="50%" r="45" />
-                <text class="progress-text actual" text-anchor="middle" alignment-baseline="middle" dx="50%" dy="50%">
-                    <tspan class="actual">{{ actual_formatted }}</tspan>
-                    <tspan class="percent">%</tspan>
-                </text>
-                <text class="progress-text" text-anchor="middle" alignment-baseline="middle" dx="50%" dy="60%">Progress</text>
-            </g>
-            <g path-group>
-                <path class="progress-bar inner-bar normal" stroke-linejoin="round" inner-path />
-                <path class="progress-bar outer-bar" stroke-linejoin="round" outer-path />
-            </g>
-        </svg>
-     </script>
+     
 	</body>
 </html>
