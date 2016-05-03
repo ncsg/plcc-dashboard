@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Purple Line Corridor</title>
+
+		<!-- meta -->
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	    <!-- css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/ionicons.min.css">
+		<link rel="stylesheet" href="css/pace.css">
+	    <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+
+        
+        <style>
+	
+html, body, #map {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+#topBanner {
+	height: 80px;
+	background-color: #fff;
+	margin: 0;
+	padding: 10px;
+	padding-left: 50px;
+	padding-top: 25px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 22px;
+	font-weight: 600;
+}
+#topBanner img {
+	float: left;
+	margin-top: -14px;
+	padding-right: 15px;
+}
+#mapContainer {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+	height: 480px;
+	padding: 0;
+}
+
+/* overrides default style for legends */
+#map .cartodb-legend-stack .cartodb-legend .legend-title {
+	font-family: 'Open Sans', sans-serif;
+	color: black;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: none;
+}
+#map .cartodb-legend-stack .cartodb-legend li {
+	font-family: 'Open Sans', sans-serif;
+	color: black;
+	font-size: 12px;
+	font-weight: normal;
+	text-transform: none;
+}
+#map .cartodb-legend-stack .cartodb-legend li .bullet {
+	height: 10px;
+	width: 10px;
+}
+#map div.cartodb-legend-stack div.cartodb-legend li.min {
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+#map div.cartodb-legend-stack div.cartodb-legend li.median {
+	float: left;
+	width: 60%;
+	text-align: center;
+}
+#map div.cartodb-legend-stack div.cartodb-legend li.max {
+	float: right;
+	width: 20%;
+	text-align: center;
+}
+
+/* overrides default style for tooltips */
+#map .cartodb-tooltip-content {
+	padding: 6px;
+}
+#map .cartodb-tooltip-content p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 11px;
+}
+#map .cartodb-searchbox .text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+}
+
+/* add scrolling to bootstrap menus */
+.scrollable-menu {
+    height: auto;
+    max-height: 450px;
+    overflow-x: hidden;
+}
+
+#layerSelectionContainer {
+	position: absolute;
+	top: 140px;
+	left: 90px;
+	padding: 0px;
+	font-size: 12px;
+}
+#geoSelectionContainer {
+	position: absolute;
+	top: 180px;
+	left: 90px;
+	padding: 0px;
+	font-size: 12px;
+}
+
+#textContent {
+	width: 80%;
+	padding-top: 30px; 
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+#textContent h3 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 18px;
+}
+#textContent h4 {
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 12px;
+}
+#textContent li {
+	margin-top: 6px;
+}
+#textContent .smaller {
+	font-size: 14px;
+}
+#textContent .larger {
+	font-size: 18px;
+}
+#textContent .larger li {
+	margin-top: 12px;
+}
+.figure {
+	float: right;
+	margin: 20px;
+	margin-top: 0px;
+	margin-right: -50px;
+	padding: 0px;
+	width: 400px;
+	border: 1px solid #ccc;
+	border-right: 0px;
+}
+
+@media only screen 
+and (max-width: 380px) {
+	
+	.mobile-hide {
+		display: none;
+	}
+	#topBanner {
+		padding-left: 20px;
+		padding-top: 5px;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	#topBanner img {
+		margin-top: 0;
+	}
+	#mapContainer {
+		height: 320px;
+		margin-bottom: 55px;
+	}
+	div .cartodb-legend-stack {
+		visibility: hidden;
+	}
+	#layerSelectionContainer {
+		left: 20px;
+		top: 410px;
+	}
+	#geoSelectionContainer {
+		left: 20px;
+		top: 450px;
+	}
+}
+
+</style>
+
+	    <!-- js -->
+	    <script src="js/jquery-2.1.3.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/pace.min.js"></script>
+	    <script src="js/modernizr.custom.js"></script>
+	    <script type="text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js"></script>
+        <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+        <script src="js/jquery-2.1.3.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="container">	
+			<header id="site-header">
+				<div class="row">
+					<div class="col-md-2 col-sm-5 col-xs-8">
+						<div class="logo">
+							<a href="index.html"><img src = "img/HomepageBanner1.png" style = "width : 90%;"></a>
+						</div>
+					</div><!-- col-md-4 -->
+					<div class="col-md-10 col-sm-7 col-xs-4">
+						<nav class="main-nav" role="navigation">
+							<div class="navbar-header">
+  								<button type="button" id="trigger-overlay" class="navbar-toggle">
+    								<span class="ion-navicon"></span>
+  								</button>
+							</div>
+
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  								<ul class="nav navbar-nav navbar-right">
+    								<li class="cl-effect-11"><a href="neighborhood.html" data-hover="Neighborhood">Neighborhood</a></li>
+    								<li class="cl-effect-11"><a href="housing.html" data-hover="Housing">Housing</a></li>
+    								<li class="cl-effect-11"><a href="labormarket.html" data-hover="Labor">Labor</a></li>
+    								<li class="cl-effect-11"><a href="localbusiness.html" data-hover="Business">Business</a></li>
+    								
+  										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-top: -1%">Tools
+    										<span class="caret"></span>
+  										</button>
+    									<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    										<li><a href="gentrification.html" data-hover="Gentrification" style="font-size: 14px !important; margin-left: 8px !important;">Gentrification</a></li>
+    										<li><a href="http://wikimapping.com/wikimap/PurpleLine.html" target= "_blank" data-hover="Crowdsourcing" style="font-size: 14px !important; margin-left: 8px !important;">Crowdsourcing</a></li>
+    									</ul>
+    							
+  								</ul>
+							</div><!-- /.navbar-collapse -->
+						</nav>
+						<div id="header-search-box">
+							<a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
+							<div id="search-form" class="search-form">
+								<form role="search" method="get" id="searchform" action="#">
+									<input type="search" placeholder="Search" required>
+									<button type="submit"><span class="ion-ios-search-strong"></span></button>
+								</form>				
+							</div>
+						</div>
+					</div><!-- col-md-8 -->
+				</div>
+			</header>
+		</div>
+
+
+		<div class="content-body">
+			
+<div id="mapContainer"></div>
+
+<div id ="layerSelectionContainer">
+<div class="dropdown">
+<!-- this button style is from the Bootstrap library -->
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Choose another data series...
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu scrollable-menu" id="layer-selector" aria-labelledby="dropdownMenuDivider">
+	  
+      
+    <li data-url="https://nfinio.cartodb.com/api/v2/viz/3e098ac8-0271-11e6-ae17-0e787de82d45/viz.json" class="active">
+    <a href="#">Displacement typologies</a></li>
+    
+    <li role="separator" class="divider"></li>
+
+    <li data-url="https://cci-displacement.cartodb.com/api/v2/viz/787c6988-47bd-11e5-8eca-0e853d047bba/viz.json">
+    <a href="#">Basemap only</a></li>
+    
+    <li data-url="https://cci-displacement.cartodb.com/api/v2/viz/3949b4a2-31a4-11e5-aeae-0e9d821ea90d/viz.json">
+    <a href="#">Population (2013)</a></li>
+    
+    <li data-url="https://cci-displacement.cartodb.com/api/v2/viz/2b46eec6-31c5-11e5-b5ff-0e0c41326911/viz.json">
+    <a href="#">Housing units in pre-1950 buildings (%, 2013)</a></li>
+
+    
+  </ul>
+</div>
+</div>
+
+<div id ="geoSelectionContainer">
+<div class="dropdown">
+<!-- this button style is from the Bootstrap library -->
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Limit by city or county...
+      
+<!-- these wont work until Nick enters the georeferencing info on his map,  -->
+      
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu scrollable-menu" id="geo-selector" aria-labelledby="dropdownMenuDivider">
+    <li data-geo="all" class="active"><a href="#">SHOW ALL</a></li>   
+    <li role="separator" class="divider"></li>
+    <li data-geo="county" data-value="Montgomery"><a href="#">Montgomery County</a></li>
+    <li data-geo="county" data-value="Prince George's"><a href="#">Prince George's County</a></li>
+
+      
+    <li role="separator" class="divider"></li>
+    
+    <li data-geo="city"><a href="#">Silver Spring</a></li>
+    <li data-geo="city"><a href="#">Bethesda</a></li>
+    <li data-geo="city"><a href="#">Langley Park</a></li>
+    <li data-geo="city"><a href="#">New Carrollton</a></li>
+
+    </ul>
+</div>
+</div>
+
+<div class="expand-map">
+	<a onclick="expandMap();" class="btn btn-primary">
+		Larger <span class="glyphicon glyphicon-chevron-down"></span> Map</a></div>
+
+<div id="textContent">
+	
+<div><h3>Mapping Neighborhood Change and Gentrification in the Purple Line Corridor</h3></div>
+
+<div><a href="img/typology_table.png" target="_blank"><img class="figure mobile-hide" src="img/typology_table.png"></a>
+
+<p>For decades, the Washington, DC metropolitan region has been booming. While immense growth in employment has brought opportunity and wealth to many area residents, and attracted countless new residents, this growth has not come without cost. Rents and home prices have escalated to unaffordable levels, even for workers with steady jobs. These increases in housing costs have been especially dramatic in transit-accessible, walkable neighborhoods.
+</p>
+    
+<p>The National Center for Smart Growth Research and Education investigated regional demographics and economic data in order to understand where accelerated neighborhood change, or gentrification, has occurred, and where it is likely to occur in the future. The interactive maps above are designed to serve as a tool for local leaders and policymakers who want to know more about how their neighborhoods are changing, and how they will change in the future. Gentrification is a widely used, but poorly defined concept that captures just one specific type of neighborhood change. With these maps, we hope to present a broader perspective to show interested parties that gentrification is just one specific type of change impacting the diverse range of neighborhoods in our area.
+</p>   
+    
+<p>This analysis utilizes data at the US Census tract level from the 2000 decennial census and the 2010-2014 American Community Survey. Census tracts in Montgomery County, Prince George’s County, and Washington, DC are included in the maps. More detailed information about the data and the methodology used to create the maps and tract categories is available in our report, Understanding Neighborhood Change in the Washington, DC Region [Link to to-be-finished report]. 
+</p>    
+
+</div>
+
+    <br>
+<div><h3>Understanding the Map</h3></div>
+<div><p>The map is divided into three color groups: blue, red, and green. The sharpest division is between the blue tracts, and the red and green tracts. The blue ones were ineligible to gentrify because they had median household income greater than the regional median in the year 2000; the green and red ones were eligible to gentrify because they had median household incomes below the median in the year 2000. The green tracts gentrified from 2000 to 2014; the red tracts did not. The blue tracts, which were already high income, are mapped by their place on the income distribution; higher income areas are darker shades of blue. The green shades show differing rates, or strength, of gentrification. The red and pink tracts are areas that were eligible to gentrify, but did not; darker shades represent areas with higher risk for gentrification in the future.
+</p></div>    
+
+    <br>
+    
+<div><h3>Understanding Gentrification and the Risk Index</h3></div>
+    
+<div><p>The green areas on the map “gentrified” from 2000 to 2014. This means two things: first, they had to be eligible to gentrify, and second, they had to gentrify based on some measurement of what gentrification means. Here, as in the academic literature, gentrification in a neighborhood is defined as an increase in home prices, and the population’s education level, that was greater than the increases that occurred in the region as a whole. This map uses this methodology, but breaks down the areas that pass the gentrification test into three categories:</p>
+
+    <ul><li>Light green (weak gentrification): gentrifying areas that actually saw decreases in median household income</li> 
+        <li>Medium green (gentrification): gentrifying areas where median household income increased zero to twenty percent</li>
+        <li>Dark green (strong gentrification): gentrifying areas where median household income increased by more than twenty percent</li>
+    </ul>
+
+<p>We deem tracts that were eligible to gentrify, but did not, as at risk for gentrification. The areas in red and pink on the map are at risk for gentrification, and darker shades are more at risk.  Specifically, these areas are at risk for accelerated increases in home prices and an influx of educated residents because they have seen, relative to other areas: greater increases in population, the proportion of the population that is white, median household income, education levels, home values, the number of housing units, rent prices, the homeownership rate, and decreases in the poverty rate. Areas that have good accessibility to jobs, both by automobile and transit, are at a higher risk to gentrify, as are areas that are within one mile of a rail-transit station, including new Purple Line stations.
+</p></div>    
+    
+
+
+<div><br><h3>Data and Documentation</h3>
+<ul><li><a href="#">Methodology &amp; results of the Regional Early Warning System</a> [PDF]</li>
+<li><a href="#">Download all data series from map</a> [XLS]</li></ul>
+</div>
+
+
+<div class="smaller">
+<br><h4>Notes</h4>
+<ul><li>Data sources include the U.S. Census, American Community Survey (ACS), Maryland Quarterly Census of Employment and Wages (QCEW), and Longitudinal Employment Household Dynamics (LEHD). Please see our downloadable data table above for more details. 
+</li></ul></div>
+
+<div><br><br></div>
+    
+    </div>
+
+<script>
+
+// set the initial map options and url here
+var INITIAL_MAP_SETTINGS = {
+	detectRetina: true,
+	center_lat: 39,
+	center_lon: -77,
+	zoom: 11
+}
+var INITIAL_VISJSON_URL = $('#layer-selector .active').data('url');
+
+// state variables
+var activeVis = null;
+var baseQuery = null; // default for layer
+var activeQuery = null; // geo selection if any
+var activeCityName = null;
+var activeCityOutline = null;
+
+function getVisLayer() {
+	// returns the CartoDB visualization layer
+	var layers = activeVis.getLayers();
+	return layers[1].getSubLayer(0);
+}
+
+function setUpMap(visjsonURL, mapSettings) {
+	$("#mapContainer").append("<div id='map'></div>");
+	cartodb.createVis('map', visjsonURL, mapSettings)
+		.done(function(vis, layers) {
+			activeVis = vis;
+			// save default sql query and apply county selection if needed
+			baseQuery = getVisLayer().getSQL();
+			// replicate prior geo selection
+			if (activeQuery) getVisLayer().setSQL(activeQuery);
+			if (activeCityName) addCityOutline(activeCityName);
+			// set custom text for search box, and remove when user clicks
+			var textBox = $("#map .cartodb-searchbox .text");
+			var defaultTxt = 'Go to place';
+			textBox.val(defaultTxt);
+			textBox.click(function() { 
+				if ($(this).val() == defaultTxt) $(this).val(''); 
+			});
+		});
+}
+
+$('#layer-selector li').click(function() {
+	var url = $(this).data('url');
+	var lmap = activeVis.getNativeMap();
+	var activeMapSettings = {
+		detectRetina: true,
+		center_lat: lmap.getCenter().lat,
+		center_lon: lmap.getCenter().lng,
+		zoom: lmap.getZoom()
+	}
+	activeVis.remove();
+	setUpMap(url, activeMapSettings);
+	resetMenu($(this));
+});
+
+$('#geo-selector li').click(function() {
+	clearCityOutline();
+	var geo = $(this).data('geo'); // 'city' or 'county' or 'all'
+	var selection = $(this).text(); // name of drop-down item
+	var query = baseQuery;
+	if (geo == 'county') {
+		var value = $(this).data('value');
+		query += " WHERE _county = '" + value + "'";
+	}
+	// San Fran county data includes Farallon Islands; map looks better if we select city instead
+	if (selection == 'San Francisco County') {
+		query = baseQuery + " WHERE _city = 'San Francisco'";
+	}
+	if (geo == 'city') {
+		query += " WHERE _city = '" + selection + "'";
+		addCityOutline(selection);
+	}
+	if (geo != 'all') 
+		zoomToExtent(query);
+		
+    // apply the query and save it in case the layer is changed
+    getVisLayer().setSQL(query);
+	activeQuery = query;
+	resetMenu($(this));
+});
+
+function zoomToExtent(query) {
+	var sql = new cartodb.SQL({user: 'cci-displacement'});  // this needs to be changed to Nick's username, but doing so now (while there is no SQL associated with his account) will break the map so leaving as-is for now
+	sql.getBounds(query).done(function(bounds) {
+        activeVis.getNativeMap().fitBounds(bounds);
+    });
+}
+
+function addCityOutline(name) {
+	activeCityName = name;
+	activeCityOutline = activeVis.getLayers()[1].createSubLayer({
+		sql: "SELECT * FROM bay_area_places_clean_v2 WHERE name = '" + name + "'",
+		cartocss: '#bay_area_places_clean_v2 { line-color: #000; line-width: 1.5;}'
+	});
+}
+
+function clearCityOutline() {
+	if (activeCityOutline) activeCityOutline.remove();
+	activeCityName = null;
+	activeCityOutline = null;
+}
+
+function resetMenu(obj) {
+	// reset selection in a pulldown menu
+	obj.parent().find('.active').removeClass('active');
+	obj.addClass('active');
+}
+
+function expandMap() {
+	$(window).scrollTop($("#mapContainer").position().top - 15);
+	var h = $(window).height() - 75;
+	$("#mapContainer").height(h);
+	$(".expand-map").html('<a onclick="contractMap();" class="btn btn-primary">Smaller <span class="glyphicon glyphicon-chevron-up"></span> Map');
+}
+
+function contractMap() {
+	$(window).scrollTop(0);
+	$("#mapContainer").height(450);
+	$(".expand-map").html('<a onclick="expandMap();" class="btn btn-primary">Larger <span class="glyphicon glyphicon-chevron-down"></span> Map');
+}
+
+window.onload = function() {
+	setUpMap(INITIAL_VISJSON_URL, INITIAL_MAP_SETTINGS);
+}
+
+</script>
+		</div>
+
+
+		<footer id="site-footer">
+			<div class="container">
+				<div class="row">
+  					<hr style="margin-top:0; margin-bottom:0;">
+					<div class="col-md-8">
+						<p>© National Center for Smart Growth at The University of Maryland, College Park</p>
+					</div>
+					<div class="col-md-4" style="text-align:right;"><img src="img/umdLogo.png" style="width : 40%;"></div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Mobile Menu -->
+		<div class="overlay overlay-hugeinc">
+			<button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="full-width.html">Blog</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<script src="js/script.js"></script>
+
+	</body>
+</html>
