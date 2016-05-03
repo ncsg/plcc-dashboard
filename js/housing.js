@@ -476,7 +476,7 @@ $(function () {
                 type: 'bar'
             },
             title: {
-                text: 'Owner Occupied Housing Units vs. Renter Occupied Housing Units'
+                text: 'Owner Occupied vs. Renter Occupied Housing Units'
             },
             subtitle: {
                 text: 'Snaphshot: 2014'
@@ -530,3 +530,506 @@ $(function () {
     });
 
 });
+
+$(function () {    
+
+    // Create the chart
+    $('#housingByCategory').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Housing Price by Category'
+        },
+        subtitle: {
+        	text: 'Series: Single Family, Townhouse, Condo <br> Click on a column to see house prices by category'
+        },
+        xAxis: {
+            type: 'category'
+        },
+
+        legend: {
+            enabled: true
+        },
+
+        plotOptions: {
+            series: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: true,
+                }
+            }
+        },
+
+        series: [{
+            name: 'Single Family',
+            colorByPoint: true,
+            data: [{
+                name: 'Bethesda - Chevy Chase',
+                y: 4055,
+                drilldown: 'Bethesda - Chevy Chase SF'
+            }, {
+                name: 'Silver Spring',
+                y: 4078,
+                drilldown: 'Silver Spring SF'
+            }, {
+                name: 'International Corridor',
+                y: 5645,
+                drilldown: 'International Corridor SF'
+            }, {
+                name: 'University of Maryland',
+                y: 2426,
+                drilldown: 'University of Maryland SF'
+            }, {
+                name: 'Riverdale - New Carrollton',
+                y: 4880,
+                drilldown: 'Riverdale - New Carrollton SF'
+            }]
+        }, {
+            name: 'Townhouse',
+            colorByPoint: true,
+            data: [{
+                name: 'Bethesda - Chevy Chase',
+                y: 517,
+                drilldown: 'Bethesda - Chevy Chase T'
+            }, {
+                name: 'Silver Spring',
+                y: 544,
+                drilldown: 'Silver Spring T'
+            }, {
+                name: 'International Corridor',
+                y: 1708,
+                drilldown: 'International Corridor T'
+            }, {
+                name: 'University of Maryland',
+                y: 91,
+                drilldown: 'University of Maryland T'
+            }, {
+                name: 'Riverdale - New Carrollton',
+                y: 714,
+                drilldown: 'Riverdale - New Carrollton T'
+            }]
+        }, {
+            name: 'Condo',
+            colorByPoint: true,
+            data: [{
+                name: 'Bethesda - Chevy Chase',
+                y: 2957,
+                drilldown: 'Bethesda - Chevy Chase C'
+            }, {
+                name: 'Silver Spring',
+                y: 2604,
+                drilldown: 'Silver Spring C'
+            }, {
+                name: 'International Corridor',
+                y: 1415,
+                drilldown: 'International Corridor C'
+            }, {
+                name: 'University of Maryland',
+                y: 220,
+                drilldown: 'University of Maryland C'
+            }, {
+                name: 'Riverdale - New Carrollton',
+                y: 603,
+                drilldown: 'Riverdale - New Carrollton C'
+            }]
+        }],
+        drilldown: {
+            _animation: {
+                duration: 2000
+            },
+            series: [{
+                id: 'Bethesda - Chevy Chase SF',
+                name: 'Bethesda - Chevy Chase Single Family',
+                data: [
+                    ['<=$100,000', 1126],
+                    ['$100,000 - $300,000', 860],
+                    ['$300,000 - $500,000', 1009],
+                    ['$500,000 - $1,000,000', 3330],
+                    ['>$1,000,000', 1204]
+                ]
+            }, {
+                id: 'Bethesda - Chevy Chase T',
+                name: 'Bethesda - Chevy Chase Townhouse',
+                data: [
+                    ['<=$100,000', 2],
+                    ['$100,000 - $300,000', 0],
+                    ['$300,000 - $500,000', 226],
+                    ['$500,000 - $1,000,000', 238],
+                    ['>$1,000,000', 51]
+                ]
+            }, {
+                id: 'Bethesda - Chevy Chase C',
+                name: 'Bethesda - Chevy Chase Condos',
+                data: [
+                    ['<=$100,000', 1045],
+                    ['$100,000 - $300,000', 854],
+                    ['$300,000 - $500,000', 585],
+                    ['$500,000 - $1,000,000', 377],
+                    ['>$1,000,000', 96]
+                ]
+            },{
+                id: 'Silver Spring SF',
+                name: 'Silver Spring Single Family',
+                data: [
+                    ['<=$100,000', 138],
+                    ['$100,000 - $300,000', 31],
+                    ['$300,000 - $500,000', 2653],
+                    ['$500,000 - $1,000,000', 1247],
+                    ['>$1,000,000', 9]
+                ]
+            }, {
+                id: 'Silver Spring T',
+                name: 'Silver Spring Townhouse',
+                data: [
+                    ['<=$100,000', 0],
+                    ['$100,000 - $300,000', 106],
+                    ['$300,000 - $500,000', 254],
+                    ['$500,000 - $1,000,000', 184],
+                    ['>$1,000,000', 0]
+                ]
+            }, {
+                id: 'Silver Spring C',
+                name: 'Silver Spring Condos',
+                data: [
+                    ['<=$100,000', 713],
+                    ['$100,000 - $300,000', 1632],
+                    ['$300,000 - $500,000', 241],
+                    ['$500,000 - $1,000,000', 18],
+                    ['>$1,000,000', 0]
+                ]
+            },{
+                id: 'International Corridor SF',
+                name: 'International Corridor Single Family',
+                data: [
+                    ['<=$100,000', 119],
+                    ['$100,000 - $300,000', 3085],
+                    ['$300,000 - $500,000', 2363],
+                    ['$500,000 - $1,000,000', 77],
+                    ['>$1,000,000', 1]
+                ]
+            },{
+                id: 'International Corridor T',
+                name: 'International Corridor Townhouse',
+                data: [
+                    ['<=$100,000', 101],
+                    ['$100,000 - $300,000', 1490],
+                    ['$300,000 - $500,000', 117],
+                    ['$500,000 - $1,000,000', 0],
+                    ['>$1,000,000', 0]
+                ]
+            }, {
+                id: 'International Corridor C',
+                name: 'International Corridor Condos',
+                data: [
+                    ['<=$100,000', 659],
+                    ['$100,000 - $300,000', 752],
+                    ['$300,000 - $500,000', 4],
+                    ['$500,000 - $1,000,000', 0],
+                    ['>$1,000,000', 0]
+                ]
+            }, {
+                id: 'University of Maryland SF',
+                name: 'University of Maryland Single Family',
+                data: [
+                    ['<=$100,000', 159],
+                    ['$100,000 - $300,000', 1530],
+                    ['$300,000 - $500,000', 644],
+                    ['$500,000 - $1,000,000', 91],
+                    ['>$1,000,000', 2]
+                ]
+            }, {
+                id: 'University of Maryland T',
+                name: 'University of Maryland Townhouse',
+                data: [
+                    ['<=$100,000', 0],
+                    ['$100,000 - $300,000', 36],
+                    ['$300,000 - $500,000', 54],
+                    ['$500,000 - $1,000,000', 1],
+                    ['>$1,000,000', 0]
+                ]
+            }, {
+                id: 'University of Maryland C',
+                name: 'University of Maryland Condos',
+                data: [
+                    ['<=$100,000', 20],
+                    ['$100,000 - $300,000', 200],
+                    ['$300,000 - $500,000', 0],
+                    ['$500,000 - $1,000,000', 0],
+                    ['>$1,000,000', 0]
+                ]
+            }, {
+                id: 'Riverdale - New Carrollton SF',
+                name: 'Riverdale - New Carrollton Single Family',
+                data: [
+                    ['<=$100,000', 274],
+                    ['$100,000 - $300,000', 4553],
+                    ['$300,000 - $500,000', 49],
+                    ['$500,000 - $1,000,000', 1],
+                    ['>$1,000,000', 3]
+                ]
+            }, {
+                id: 'Riverdale - New Carrollton T',
+                name: 'Riverdale - New Carrollton Townhouse',
+                data: [
+                    ['<=$100,000', 38],
+                    ['$100,000 - $300,000', 676],
+                    ['$300,000 - $500,000', 0],
+                    ['$500,000 - $1,000,000', 0],
+                    ['>$1,000,000', 0]
+                ]
+            }, {
+                id: 'Riverdale - New Carrollton C',
+                name: 'Riverdale - New Carrollton Condos',
+                data: [
+                    ['<=$100,000', 603],
+                    ['$100,000 - $300,000', 0],
+                    ['$300,000 - $500,000', 0],
+                    ['$500,000 - $1,000,000', 0],
+                    ['>$1,000,000', 0]
+                ]
+            }]
+        }
+    })
+});
+    
+$(function () {
+    $('#affordableOwner').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Affordable Housing for Owners'
+        },
+        xAxis: {
+            categories: ['Bethesda - Chevy Chase', 'Silver Spring', 'International Corridor', 'University of Maryland', 'Riverdale - New Carrollton']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Total number of houses'
+            },
+            stackLabels: {
+                enabled: true,
+                style: {
+                    fontWeight: 'bold',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                }
+            }
+        },
+        tooltip: {
+            headerFormat: '<b>{point.x}</b><br/>',
+            pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+        },
+        plotOptions: {
+            column: {
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: false,
+                }
+            }
+        },
+        series: [{
+            name: 'Affordable to the Very Low Income',
+            data: [1766, 2229, 3477, 768, 4158]
+        }, {
+            name: '~Low Income',
+            data: [541, 1261, 3843, 1187, 2493]
+        }, {
+            name: '~Middle Income',
+            data: [348, 1144, 1383, 427, 151]
+        }, {
+            name: '~Not Affordable',
+            data: [5827, 4046, 758, 739, 429]
+        }]
+    });
+});
+
+$(function () {
+    $('#affordableRenter1B').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Affordable Housing for Renters'
+        },
+        subtitle: {
+        		text: 'One Bedroom Houses'
+        },
+        xAxis: {
+            categories: ['Bethesda - Chevy Chase', 'Silver Spring', 'International Corridor', 'University of Maryland', 'Riverdale - New Carrollton']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Total number of houses'
+            },
+            stackLabels: {
+                enabled: true,
+                style: {
+                    fontWeight: 'bold',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                }
+            }
+        },
+        tooltip: {
+            headerFormat: '<b>{point.x}</b><br/>',
+            pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+        },
+        plotOptions: {
+            column: {
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: false,
+                }
+            }
+        },
+        series: [{
+            name: 'Affordable to the Very Low Income',
+            data: [0,23, 176, 0, 0]
+        }, {
+            name: '~Low Income',
+            data: [199, 892, 2875, 67, 159]
+        }, {
+            name: '~Middle Income',
+            data: [112, 2496, 0, 0, 213]
+        }, {
+            name: '~Not Affordable',
+            data: [1098, 1437, 0, 0, 0]
+        }]
+    });
+});
+
+$(function () {
+    $('#affordableRenter2B').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Affordable Housing for Renters'
+        },
+        subtitle: {
+        		text: 'Two Bedroom Houses'
+        },
+        xAxis: {
+            categories: ['Bethesda - Chevy Chase', 'Silver Spring', 'International Corridor', 'University of Maryland', 'Riverdale - New Carrollton']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Total number of houses'
+            },
+            stackLabels: {
+                enabled: true,
+                style: {
+                    fontWeight: 'bold',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                }
+            }
+        },
+        tooltip: {
+            headerFormat: '<b>{point.x}</b><br/>',
+            pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+        },
+        plotOptions: {
+            column: {
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: false,
+                }
+            }
+        },
+        series: [{
+            name: 'Affordable to the Very Low Income',
+            data: [0,0, 0, 0, 0]
+        }, {
+            name: '~Low Income',
+            data: [0, 134, 2032, 0, 0]
+        }, {
+            name: '~Middle Income',
+            data: [124, 1006, 1647, 36, 370]
+        }, {
+            name: '~Not Affordable',
+            data: [841, 2638, 0, 0, 144]
+        }]
+    });
+});
+
+$(function () {
+    $('#affordableRenter3B').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Affordable Housing for Renters'
+        },
+        subtitle: {
+        		text: 'Three Bedroom Houses'
+        },
+        xAxis: {
+            categories: ['Bethesda - Chevy Chase', 'Silver Spring', 'International Corridor', 'University of Maryland', 'Riverdale - New Carrollton']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Total number of houses'
+            },
+            stackLabels: {
+                enabled: true,
+                style: {
+                    fontWeight: 'bold',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                }
+            }
+        },
+        tooltip: {
+            headerFormat: '<b>{point.x}</b><br/>',
+            pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+        },
+        plotOptions: {
+            column: {
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: false,
+                }
+            }
+        },
+        series: [{
+            name: 'Affordable to the Very Low Income',
+            data: [0,0, 0, 0, 0]
+        }, {
+            name: '~Low Income',
+            data: [0, 19, 14, 0, 0]
+        }, {
+            name: '~Middle Income',
+            data: [0, 88, 209, 0, 0]
+        }, {
+            name: '~Not Affordable',
+            data: [156, 515, 108, 0, 102]
+        }]
+    });
+});
+
+function showDiv(id){
+	if(id == 1) {
+        document.getElementById('affordableRenter1B').style.display = "block"; 
+        document.getElementById('affordableRenter2B').style.display = "none"; 
+        document.getElementById('affordableRenter3B').style.display = "none"; 
+    }
+    if(id == 2) {
+        document.getElementById('affordableRenter1B').style.display = "none"; 
+        document.getElementById('affordableRenter2B').style.display = "block"; 
+        document.getElementById('affordableRenter3B').style.display = "none"; 
+    }
+    if(id == 3) {
+        document.getElementById('affordableRenter1B').style.display = "none"; 
+        document.getElementById('affordableRenter2B').style.display = "none"; 
+        document.getElementById('affordableRenter3B').style.display = "block";
+    }
+}
+
+function setViewFunction() {
+ 	document.getElementById('affordableRenter1B').style.display = "block"; 
+    document.getElementById('affordableRenter2B').style.display = "none"; 
+    document.getElementById('affordableRenter3B').style.display = "none";
+}

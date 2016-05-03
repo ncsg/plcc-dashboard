@@ -1,10 +1,19 @@
 $(function () {
 	Highcharts.setOptions({
-     colors: ['#542788', '#998ec3', '#d8daeb', '#b35806', '#f1a340']
+     colors: ['#4a1486', '#807dba', '#bcbddc', '#d8daeb', '#b35806', '#f1a340']
     });
+    Highcharts.setOptions({
+    lang: {
+        thousandsSep: ','
+    }
+});
+
     $('#container').highcharts({
         title: {
-            text: 'Travel pattern by Subarea (as of 2014)'
+            text: 'Travel pattern by Subarea'
+        },
+        subtitle: {
+            text: 'Snapshot: 2014'
         },
         xAxis: {
             categories: ['Bethesda', 'Silver Spring', 'International Corridor', 'University of Maryland', 'New Carrolton']
@@ -217,8 +226,8 @@ $(function () {
                     pointStart: 1
                 }],
                 tooltip: {
-                    headerFormat: '<span style="font-size: 10px">' + $td.parent().find('th').html() + ', D{point.x}:</span><br/>',
-                    pointFormat: '<b>{point.y}</b>'
+                    headerFormat: '<span style="font-size: 10px">' + $td.parent().find('th').html() + ', D{point.x:.2f}%</span><br/>',
+                    pointFormat: '<b>{point.y:.2f}%</b>'
                 },
                 chart: chart
             });
@@ -422,18 +431,20 @@ $(function () {
 });
 
 
+
+
 $(function () {
     var categories = ['Less than High School', 'High School', 'Some College', 'Bachelors Degree'];
     $(document).ready(function () {
-        $('#compareDiv').highcharts({
+        $('#compareDiv1').highcharts({
             chart: {
                 type: 'bar'
             },
             title: {
-                text: 'Comparison for number of jobs by Education Level'
+                text: 'Job-Housing Balance by Education Level'
             },
             subtitle: {
-                text: 'Bethesda'
+                text: 'Bethesda <br> (Snapshot 2014)'
             },
             xAxis: [{
                 categories: categories,
@@ -469,16 +480,273 @@ $(function () {
 
             tooltip: {
                 formatter: function () {
-                    return '<b>' + this.series.name + ', age ' + this.point.category + '</b><br/>' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
+                    return '<b>' + this.series.name + ', '+ this.point.category + ': </b>' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
                 }
             },
 
             series: [{
-                name: 'Work Area Characteristic',
-                data: [-3731, -5854, -7782, -12372]
+                name: 'Workers by Workplace',
+                data: [-4726,-3861,-5742,-7539]
             }, {
-                name: 'Resident Area Characteristic',
-                data: [557, 1073, 1401, 3962]
+                name: 'Workers by Residence',
+                data: [721,1367,1895,4087
+]
+            }]
+        });
+    });
+
+});
+
+$(function () {
+    var categories = ['Less than High School', 'High School', 'Some College', 'Bachelors Degree'];
+    $(document).ready(function () {
+        $('#compareDiv3').highcharts({
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Job-Housing Balance by Education Level'
+            },
+            subtitle: {
+                text: 'International Corridor <br> (Snapshot 2014)'
+            },
+            xAxis: [{
+                categories: categories,
+                reversed: false,
+                labels: {
+                    step: 1
+                }
+            }, { // mirror axis on right side
+                opposite: true,
+                reversed: false,
+                categories: categories,
+                linkedTo: 0,
+                labels: {
+                    step: 1
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                labels: {
+                    formatter: function () {
+                        return Math.abs(this.value);
+                    }
+                }
+            },
+
+            plotOptions: {
+                series: {
+                    stacking: 'normal'
+                }
+            },
+
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.series.name + ', '+ this.point.category + ': </b>' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
+                }
+            },
+
+            series: [{
+                name: 'Workers by Workplace',
+                data: [-1637,-1182,-1357,-1615]
+            }, {
+                name: 'Workers by Residence',
+                data: [4123,4078,4338,4749
+]
+            }]
+        });
+    });
+
+});
+
+$(function () {
+    var categories = ['Less than High School', 'High School', 'Some College', 'Bachelors Degree'];
+    $(document).ready(function () {
+        $('#compareDiv5').highcharts({
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Job-Housing Balance by Education Level'
+            },
+            subtitle: {
+                text: 'Riverdale - New Carrolton <br> (Snapshot 2014)'
+            },
+            xAxis: [{
+                categories: categories,
+                reversed: false,
+                labels: {
+                    step: 1
+                }
+            }, { // mirror axis on right side
+                opposite: true,
+                reversed: false,
+                categories: categories,
+                linkedTo: 0,
+                labels: {
+                    step: 1
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                labels: {
+                    formatter: function () {
+                        return Math.abs(this.value);
+                    }
+                }
+            },
+
+            plotOptions: {
+                series: {
+                    stacking: 'normal'
+                }
+            },
+
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.series.name + ', '+ this.point.category + ': </b>' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
+                }
+            },
+
+            series: [{
+                name: 'Workers by Workplace',
+                data: [-13490,-12300,-20983,-25606]
+            }, {
+                name: 'Workers by Residence',
+                data: [9654,12114,13752,18688
+]
+            }]
+        });
+    });
+
+});
+
+$(function () {
+    var categories = ['Less than High School', 'High School', 'Some College', 'Bachelors Degree'];
+    $(document).ready(function () {
+        $('#compareDiv2').highcharts({
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Job-Housing Balance by Education Level (Snapshot 2014)'
+            },
+            subtitle: {
+                text: 'Silver Spring'
+            },
+            xAxis: [{
+                categories: categories,
+                reversed: false,
+                labels: {
+                    step: 1
+                }
+            }, { // mirror axis on right side
+                opposite: true,
+                reversed: false,
+                categories: categories,
+                linkedTo: 0,
+                labels: {
+                    step: 1
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                labels: {
+                    formatter: function () {
+                        return Math.abs(this.value);
+                    }
+                }
+            },
+
+            plotOptions: {
+                series: {
+                    stacking: 'normal'
+                }
+            },
+
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.series.name + ', '+ this.point.category + ': </b>' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
+                }
+            },
+
+            series: [{
+                name: 'Workers by Workplace',
+                data: [-3764,-3161,-4800,-5831]
+            }, {
+                name: 'Workers by Residence',
+                data: [1712,2822,3542,5839
+]
+            }]
+        });
+    });
+
+});
+
+$(function () {
+    var categories = ['Less than High School', 'High School', 'Some College', 'Bachelors Degree'];
+    $(document).ready(function () {
+        $('#compareDiv4').highcharts({
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Job-Housing Balance by Education Level'
+            },
+            subtitle: {
+                text: 'University of Maryland (Snapshot 2014)'
+            },
+            xAxis: [{
+                categories: categories,
+                reversed: false,
+                labels: {
+                    step: 1
+                }
+            }, { // mirror axis on right side
+                opposite: true,
+                reversed: false,
+                categories: categories,
+                linkedTo: 0,
+                labels: {
+                    step: 1
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                labels: {
+                    formatter: function () {
+                        return Math.abs(this.value);
+                    }
+                }
+            },
+
+            plotOptions: {
+                series: {
+                    stacking: 'normal'
+                }
+            },
+
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.series.name + ', '+ this.point.category + ': </b>' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
+                }
+            },
+
+            series: [{
+                name: 'Workers by Workplace',
+                data: [-1795,-1721,-3321,-4616]
+            }, {
+                name: 'Workers by Residence',
+                data: [627,940,1010,1352
+]
             }]
         });
     });
@@ -495,15 +763,18 @@ $(function () {
             type: 'bar'
         },
         title: {
-            text: 'Job Distribution by Education Level'
+            text: 'Workers by Education Level'
+        },
+        subtitle: {
+            text: 'Workers by Residence'
         },
         xAxis: {
-            categories: ['Bethesda - Chevy Chase', 'International Corridor', 'Riverdale - New Carrolton', 'Silver Spring', 'University of Maryland']
+            categories: ['Bethesda - Chevy Chase', 'Silver Spring', 'International Corridor', 'University of Maryland', 'Riverdale - New Carrollton']
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'Total Jobs'
+                text: 'Total number of workers'
             }
         },
         legend: {
@@ -516,40 +787,62 @@ $(function () {
         },
         series: [{
             name: 'Less than High School',
-            data: [557, 3997, 2251, 1835, 716]
+            data: [557, 1835, 3997, 716, 2251]
         }, {
-            name: 'No College',
-            data: [1073, 3569, 2659, 2625, 817]
+            name: 'High School or Equivalent',
+            data: [1073, 2625, 3569, 817, 2659]
         }, {
             name: 'Some College',
-            data: [1401, 3796, 2768, 3368, 974]
+            data: [1401, 3368, 3796, 974, 2768]
         }, {
-            name: 'Bachelors Degree',
-            data: [3962, 4265, 2083, 5326, 1155]
+            name: 'Bachelors Degree or Advanced',
+            data: [3962, 5326, 4265, 1155, 2083]
         }]
     });
 });
 
 function showDiv(id){
 	if(id == 1) {
-        document.getElementById('laborByAge').style.display = "block"; 
-        document.getElementById('laborByAge1').style.display = "none"; 
-        document.getElementById('laborByAge2').style.display = "none"; 
+        document.getElementById('compareDiv1').style.display = "block"; 
+        document.getElementById('compareDiv2').style.display = "none"; 
+        document.getElementById('compareDiv3').style.display = "none"; 
+        document.getElementById('compareDiv4').style.display = "none"; 
+        document.getElementById('compareDiv5').style.display = "none";
     }
     if(id == 2) {
-        document.getElementById('laborByAge').style.display = "none"; 
-        document.getElementById('laborByAge1').style.display = "block"; 
-        document.getElementById('laborByAge2').style.display = "none"; 
+        document.getElementById('compareDiv1').style.display = "none"; 
+        document.getElementById('compareDiv2').style.display = "block"; 
+        document.getElementById('compareDiv3').style.display = "none"; 
+        document.getElementById('compareDiv4').style.display = "none"; 
+        document.getElementById('compareDiv5').style.display = "none";
     }
     if(id == 3) {
-        document.getElementById('laborByAge').style.display = "none"; 
-        document.getElementById('laborByAge1').style.display = "none"; 
-        document.getElementById('laborByAge2').style.display = "block"; 
+        document.getElementById('compareDiv1').style.display = "none"; 
+        document.getElementById('compareDiv2').style.display = "none"; 
+        document.getElementById('compareDiv3').style.display = "block"; 
+        document.getElementById('compareDiv4').style.display = "none"; 
+        document.getElementById('compareDiv5').style.display = "none";
+    }
+    if(id == 4) {
+        document.getElementById('compareDiv1').style.display = "none"; 
+        document.getElementById('compareDiv2').style.display = "none"; 
+        document.getElementById('compareDiv3').style.display = "none"; 
+        document.getElementById('compareDiv4').style.display = "block"; 
+        document.getElementById('compareDiv5').style.display = "none";
+    }
+    if(id == 5) {
+        document.getElementById('compareDiv1').style.display = "none"; 
+        document.getElementById('compareDiv2').style.display = "none"; 
+        document.getElementById('compareDiv3').style.display = "none"; 
+        document.getElementById('compareDiv4').style.display = "none"; 
+        document.getElementById('compareDiv5').style.display = "block";
     }
 }
 
 function setViewFunction() {
-	document.getElementById('laborByAge').style.display = "block"; 
-    document.getElementById('laborByAge1').style.display = "none"; 
-    document.getElementById('laborByAge2').style.display = "none"; 
+	document.getElementById('compareDiv1').style.display = "block"; 
+    document.getElementById('compareDiv2').style.display = "none"; 
+    document.getElementById('compareDiv3').style.display = "none"; 
+    document.getElementById('compareDiv4').style.display = "none"; 
+    document.getElementById('compareDiv5').style.display = "none";
 }
