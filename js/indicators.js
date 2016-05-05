@@ -183,7 +183,7 @@ $(function () {
 
         series: [{
             name: 'Household Income',
-            data: [-10],
+            data: [11],
             datalabels: 'false',
             tooltip: {
                 valueSuffix: '%'
@@ -279,7 +279,7 @@ $(function () {
 
         series: [{
             name: 'Unemployment',
-            data: [3],
+            data: [-3],
             datalabels: 'false',
             tooltip: {
                 valueSuffix: '%'
@@ -375,7 +375,7 @@ $(function () {
 
         series: [{
             name: 'Housing Units',
-            data: [-3],
+            data: [3],
             datalabels: 'false',
             tooltip: {
                 valueSuffix: '%'
@@ -471,7 +471,7 @@ $(function () {
 
         series: [{
             name: 'Median Housing Value',
-            data: [13],
+            data: [-12],
             datalabels: 'false',
             tooltip: {
                 valueSuffix: '%'
@@ -567,7 +567,7 @@ $(function () {
 
         series: [{
             name: 'Median Housing Rent',
-            data: [-5],
+            data: [5],
             datalabels: 'false',
             tooltip: {
                 valueSuffix: '%'
@@ -3473,7 +3473,7 @@ $(function () {
             type: 'line'
         },
         title: {
-            text: 'Trend (2006-10 to 2010-14)'
+            text: 'Bethesda <br> Trend (2006-10 to 2010-14)'
         },
         subtitle: {
             text: 'Bethesda - Chevy Chase'
@@ -3489,33 +3489,34 @@ $(function () {
         plotOptions: {
             line: {
                 dataLabels: {
-                    enabled: true
+                    enabled: true,
+                    format: '{point.y}%'
                 },
                 enableMouseTracking: false
             }
         },
         series: [{
             name: 'Total Population',
-            data: [18703,20675]
+            data: [12.00, 11.17]
         },{
             name: 'Median Household Income',
-            data: [127290.65,155056.24]
+            data: [33.47, 36.26]
         },
         {
             name: 'Unemployment',
-            data: [474,349]
+            data: [5.65, 4.29]
         },
         {
             name: 'Housing Units',
-            data: [9643,10175]
+            data: [16.54, 16.91]
         },
         {
             name: 'Median Housing Value',
-            data: [752200.18,742941.35]
+            data: [36.19, 40.53]
         },
         {
             name: 'Median Housing Rent',
-            data: [1737.65,1625.47]
+            data: [28.67, 25.66]
         }
         ]
         
@@ -3529,7 +3530,7 @@ $(function () {
             type: 'line'
         },
         title: {
-            text: 'Trend (2006-10 to 2010-14)'
+            text: 'International Corridor <br> Trend (2006-10 to 2010-14)'
         },
         subtitle: {
             text: 'International Corridor'
@@ -3545,33 +3546,34 @@ $(function () {
         plotOptions: {
             line: {
                 dataLabels: {
-                    enabled: true
+                    enabled: true,
+                    format: '{point.y}%'
                 },
                 enableMouseTracking: false
             }
         },
         series: [{
             name: 'Total Population',
-            data: [55257,59160]
+            data: [35.46, 33.03]
         },{
             name: 'Median Household Income',
-            data: [62694.45, 63307.97]
+            data: [16.48, 14.80]
         },
         {
             name: 'Unemployment',
-            data: [3940, 3359]
+            data: [46.97, 41.28]
         },
         {
             name: 'Housing Units',
-            data: [18168,18145]
+            data: [31.17, 30.14]
         },
         {
             name: 'Median Housing Value',
-            data: [321622.58, 239038.71]
+            data: [15.47, 13.04]
         },
         {
             name: 'Median Housing Rent',
-            data: [985.23, 1083.48]
+            data: [16.26, 17.10]
         }
         ]
         
@@ -3584,7 +3586,7 @@ $(function () {
             type: 'line'
         },
         title: {
-            text: 'Trend (2006-10 to 2010-14)'
+            text: 'Riverdale - New Carrollton <br> Trend (2006-10 to 2010-14)'
         },
         subtitle: {
             text: 'Riverdale - New Carrolton'
@@ -3600,33 +3602,34 @@ $(function () {
         plotOptions: {
             line: {
                 dataLabels: {
-                    enabled: true
+                    enabled: true,
+                    format: '{point.y}%'
                 },
                 enableMouseTracking: false
             }
         },
         series: [{
             name: 'Total Population',
-            data: [29108, 30659]
+            data: [18.69, 17.4]
         },{
             name: 'Median Household Income',
-            data: [60961, 61594.74]
+            data: [16.03, 14.40]
         },
         {
             name: 'Unemployment',
-            data: [1960, 1774]
+            data: [23.36, 21.80]
         },
         {
             name: 'Housing Units',
-            data: [10467, 10213]
+            data: [17.96, 16.97]
         },
         {
             name: 'Median Housing Value',
-            data: [264015.8, 210010.53]
+            data: [12.70, 11.46]
         },
         {
             name: 'Median Housing Rent',
-            data: [934.37, 1056.95]
+            data: [15.42, 16.68]
         }
         ]
         
@@ -3639,7 +3642,7 @@ $(function () {
             type: 'line'
         },
         title: {
-            text: 'Trend (2006-10 to 2010-14)'
+            text: 'Silver Spring <br> Trend (2006-10 to 2010-14)'
         },
         subtitle: {
             text: 'Silver Spring'
@@ -3655,33 +3658,34 @@ $(function () {
         plotOptions: {
             line: {
                 dataLabels: {
-                    enabled: true
+                    enabled: true,
+                    format: '{point.y}%'
                 },
                 enableMouseTracking: false
             }
         },
         series: [{
             name: 'Total Population',
-            data: [31493, 34795]
+            data: [20.21, 18.82]
         },{
             name: 'Median Household Income',
-            data: [78662.12, 89217.44]
+            data: [20.68, 20.86]
         },
         {
             name: 'Unemployment',
-            data: [1065, 1561]
+            data: [12.69, 19.18]
         },
         {
             name: 'Housing Units',
-            data: [16252, 18295]
+            data: [27.88, 30.39]
         },
         {
             name: 'Median Housing Value',
-            data: [369992, 363924]
+            data: [17.80, 19.85]
         },
         {
             name: 'Median Housing Rent',
-            data: [1282.44, 1361.88]
+            data: [21.16, 21.50]
         }
         ]
         
@@ -3694,7 +3698,7 @@ $(function () {
             type: 'line'
         },
         title: {
-            text: 'Trend (2006-10 to 2010-14)'
+            text: 'University of Maryland <br> Trend (2006-10 to 2010-14)'
         },
         subtitle: {
             text: 'University of Maryland'
@@ -3710,33 +3714,34 @@ $(function () {
         plotOptions: {
             line: {
                 dataLabels: {
-                    enabled: true
+                    enabled: true,
+                    format: '{point.y}%'
                 },
                 enableMouseTracking: false
             }
         },
         series: [{
             name: 'Total Population',
-            data: [21277, 22029]
+            data: [13.65, 12.72]
         },{
             name: 'Median Household Income',
-            data: [50710.22, 58455.56]
+            data: [13.33, 13.67]
         },
         {
             name: 'Unemployment',
-            data: [950, 1094]
+            data: [11.32, 13.44]
         },
         {
             name: 'Housing Units',
-            data: [3756, 3360]
+            data: [6.44, 5.58]
         },
         {
             name: 'Median Housing Value',
-            data: [370466.67, 276933.33]
+            data: [17.83, 15.11,]
         },
         {
             name: 'Median Housing Rent',
-            data: [1119.56, 1207.22]
+            data: [18.47, 19.06]
         }
         ]
         
@@ -3749,7 +3754,7 @@ $(function () {
             type: 'line'
         },
         title: {
-            text: 'Trend (2006-10 to 2010-14)'
+            text: 'Corridor <br> Trend (2006-10 to 2010-14)'
         },
         subtitle: {
             text: 'Corridor'
@@ -3765,33 +3770,34 @@ $(function () {
         plotOptions: {
             line: {
                 dataLabels: {
-                    enabled: true
+                    enabled: true,
+                    format: '{point.y}%'
                 },
                 enableMouseTracking: false
             }
         },
         series: [{
             name: 'Total Population',
-            data: [155838, 167318]
+            data: [0, 7.36]
         },{
             name: 'Median Household Income',
-            data: [76125.5, 84409.3]
+            data: [0, 12.44]
         },
         {
             name: 'Unemployment',
-            data: [8389, 8137]
+            data: [0, -3]
         },
         {
             name: 'Housing Units',
-            data: [58286, 60188]  
+            data: [0, 3.26]  
         },
         {
             name: 'Median Housing Value',
-            data: [399584.2, 352682.21]
+            data: [0, -11.81]
         },
         {
             name: 'Median Housing Rent',
-            data: [1187.84, 1249.65]
+            data: [0, 4.55]
         }
         ]
         

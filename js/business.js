@@ -189,8 +189,8 @@ $(function () {
                     pointStart: 1
                 }],
                 tooltip: {
-                    headerFormat: '<span style="font-size: 10px">' + $td.parent().find('th').html() + ', D{point.x:.2f}%</span><br/>',
-                    pointFormat: '<b>{point.y:.2f}%</b>'
+                    headerFormat: '<span style="font-size: 10px">' + $td.parent().find('th').html() + ', D{point.x}:</span><br/>',
+                    pointFormat: '<b>{point.y}</b>'
                 },
                 chart: chart
             });
