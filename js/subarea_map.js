@@ -1,9 +1,9 @@
     /*    Access Maps
-        //    by knaaptime
-        //
-        */
+            //    by knaaptime
+            //
+            */
 
-//MAP 1
+    //MAP 1
 
     var subarea_map = L.map('subarea_map', {
         maxZoom: 18
@@ -26,21 +26,21 @@
     info.addTo(subarea_map);
 
 
-  function getColor(d) {
+    function getColor(d) {
         return d > 40000 ? '#800026' :
             d > 20000 ? '#BD0026' :
             d > 10000 ? '#E31A1C' :
             d > 5000 ? '#FC4E2A' :
             d > 2500 ? '#FD8D3C' :
             d > 1500 ? '#FEB24C' :
-            '#FFEDA0' ;
+            '#FFEDA0';
     };
 
 
 
 
 
-  function access_style(feature) {
+    function access_style(feature) {
         return {
             fillColor: 'blue',
             weight: 0,
@@ -68,7 +68,7 @@
     }
 
 
-    var access;    
+    var access;
 
     function resetHighlight(e) {
         access.resetStyle(e.target);
@@ -102,9 +102,9 @@
         attribution: "HUD"
     });
 
-    
-   // omnivore.topojson('/data/geo/subareas.json', null, access).addTo(subarea_map);
- var access = new L.GeoJSON.AJAX('/data/geo/subareas.json').addTo(subarea_map);
+
+    // omnivore.topojson('/data/geo/subareas.json', null, access).addTo(subarea_map);
+    var access = new L.GeoJSON.AJAX('/data/geo/subareas.json').addTo(subarea_map);
 
 
 
@@ -125,7 +125,7 @@
     });
 
 
-    subarea_map.setView(new L.LatLng(38.98, -76.98), 12);
+    subarea_map.setView(new L.LatLng(38.97, -76.98), 12);
     subarea_map.addLayer(CartoDB_Positron);
     subarea_map.addLayer(access);
 
@@ -146,6 +146,3 @@
 
     //create layer switcher
     L.control.layers(baseMaps, overlayMaps).addTo(subarea_map);
-
-
-    
