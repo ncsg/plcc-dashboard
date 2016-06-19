@@ -30,6 +30,7 @@
         <script type="text/javascript" src="/js/leaflet.label.js"></script>
         <script type="text/javascript" src="/js/leaflet-omnivore.min.js"></script>
         <script type="text/javascript" src="/js/leaflet.ajax.min.js"></script>
+        <script type="text/javascript" src="/js/AnimatedMarker.js"></script>
 		
 		<!--indicators on homepage-->
     	<script src="https://code.highcharts.com/highcharts.js"></script>
@@ -37,7 +38,42 @@
 		<script src="https://code.highcharts.com/modules/exporting.js"></script>
 		<script type="text/javascript" src="js/indicator2.js"></script>
         
-        
+
+    
+<style>
+		#map {
+			width: 800px;
+			height: 500px;
+		}
+
+		.info {
+			padding: 6px 8px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+		.info h4 {
+			margin: 0 0 5px;
+			color: #777;
+		}
+
+		.legend {
+			text-align: left;
+			line-height: 18px;
+			color: #555;
+		}
+		.legend i {
+			width: 18px;
+			height: 18px;
+			float: left;
+			margin-right: 8px;
+			opacity: 0.7;
+		}
+    
+        .top-buffer { margin-top:55px; }
+	</style>        
 
 	</head>
 
@@ -103,14 +139,11 @@
 						<h2>Purple Line Corridor Data Dashboard</h2>
 						<article class="post">
 							<div class="entry-content clearfix">
-								<div class="col-md-8" id="map container" style="padding-left: 0px !important; padding-right: 0px !important; text-align: center;">
-                                     <h4>Corridor Subareas</h4>
+								<div class="col-md-12" id="map container" style="padding-left: 0px !important; padding-right: 0px !important;">
                                             <div id="subarea_map" style="height: 340px">
                                             </div>
 								</div>
-								<div class="col-md-4 col-xs-12">					
-									<!-- start feedwind code --><script type="text/javascript">document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');</script><script type="text/javascript">(function() {var params = {rssmikle_url: "https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&q=purple+line+metro+maryland&output=rss",rssmikle_frame_width: "300",rssmikle_frame_height: "355",frame_height_by_article: "0",rssmikle_target: "_blank",rssmikle_font: "Arial, Helvetica, sans-serif",rssmikle_font_size: "12",rssmikle_border: "off",responsive: "off",rssmikle_css_url: "",text_align: "left",text_align2: "left",corner: "off",scrollbar: "on",autoscroll: "on",scrolldirection: "up",scrollstep: "3",mcspeed: "20",sort: "Off",rssmikle_title: "on",rssmikle_title_sentence: "Purple Line Metro News",rssmikle_title_link: "",rssmikle_title_bgcolor: "#0D060F",rssmikle_title_color: "#FFFFFF",rssmikle_title_bgimage: "",rssmikle_item_bgcolor: "#FFFFFF",rssmikle_item_bgimage: "",rssmikle_item_title_length: "55",rssmikle_item_title_color: "#5E2B6E",rssmikle_item_border_bottom: "on",rssmikle_item_description: "on",item_link: "off",rssmikle_item_description_length: "150",rssmikle_item_description_color: "#666666",rssmikle_item_date: "gl1",rssmikle_timezone: "Etc/GMT",datetime_format: "%b %e, %Y %l:%M %p",item_description_style: "text+tn",item_thumbnail: "full",item_thumbnail_selection: "auto",article_num: "15",rssmikle_item_podcast: "off",keyword_inc: "",keyword_exc: ""};feedwind_show_widget_iframe(params);})();</script><div style="font-size:10px; text-align:center; width:300px;"><a href="http://feed.mikle.com/" target="_blank" style="color:#CCCCCC;">RSS Feed Widget</a><!--Please display the above link in your web page according to Terms of Service.--></div><!-- end feedwind code --><!--  end  feedwind code -->
-								</div>
+
                                 <div class="row">
                                 <div class="col-md-6" style="text-align: center;"><i class="fa fa-child" style="color:purple; font-size: 7.5em; "></i><p>Neighborhood Identity</p></div>
                                 <div class="col-md-6" style="text-align: center;"><i class="fa fa-home" style="color:purple; font-size: 7.5em;"></i><p>Housing Choice</p></div>
@@ -129,17 +162,23 @@
 									
 								</div>
 								<hr>
-<div class="row">
-									<div class="col-md-4" style="text-align: center;">
-										<h4>Select a subarea to change the meters and trends</h4><br>
-										<button class="btn btn-default" type="button" id="Corridor">Total Population</button><br><br>
-										<button class="btn btn-default" type="button" id="B">Median Household Income</button><br><br>
-										<button class="btn btn-default" type="button" id="SS">Unemployment</button><br><br>
-										<button class="btn btn-default" type="button" id="IC">Housing Units</button><br><br>
-										<button class="btn btn-default" type="button" id="UM">Median Housing Value</button><br><br>
-										<button class="btn btn-default" type="button" id="RC">Median Housing Rent</button><br><br>
+                                <div class="row">
+                                    <div style="text-align: right">
+									<div class="dropdown">
+                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="font-size: 1.2em;">Select an Indicator
+						  				<span class="caret"></span></button>
+						  				<ul class="dropdown-menu dropdown-menu-right">
+                                            <li> <a href="#trendCorridor#" id="Corridor">Total Population</a></li>
+						    				<li><a href="#trendBethesda#" id="B">Median Household Income</a></li>
+						    				<li><a href="#trendSS#" id="SS">Unemployment</a></li>
+						    				<li><a href="#trendIC#" id="IC">Housing Units</a></li>
+						    				<li><a href="#trendUM#" id="UM">Median Home Value</a></li>
+						    				<li><a href="#trendRiverdale#" id="RC">Median Rent</a></li>
+                                            
+						  				</ul>
 									</div>
-									<div class="col-md-8">
+								</div>
+									<div class="col-md-12">
 										<div id="trendCorridor" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 										<div id="trendBethesda" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 										<div id="trendSS" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
