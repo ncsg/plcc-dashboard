@@ -122,10 +122,10 @@ var pl_line = [{
 
 
 var geojsonMarkerOptions = {
-    radius: 8,
-    fillColor: "#ff7800",
-    color: "#000",
-    weight: 1,
+    radius: 6,
+    fillColor: "purple",
+    color: "white",
+    weight: 2.5,
     opacity: 1,
     fillOpacity: 0.8
 };
@@ -147,7 +147,12 @@ var linestyle = {
 
 var purple = new L.geoJson(pl_line);
 
-
+ // Creates a red marker with the coffee icon
+  var plMarker = L.AwesomeMarkers.icon({
+    prefix: 'fa',  
+    icon: 'subway',
+    markerColor: 'purple'
+  });
 // create geojson layer
 // var geojson = new L.geoJson(pct);
 // geojson.addTo(map);
@@ -170,12 +175,12 @@ var eachLayer = purple.eachLayer(function(layer){
 
 var line = new L.polyline(temp),
   animatedMarker = L.animatedMarker(line.getLatLngs(), {
+    icon: plMarker,
     autoStart: true,
     distance: 200,
     interval: 350
   });
 
-subarea_map.addLayer(animatedMarker);
 
 
 // delay start so that data has time to load
@@ -210,6 +215,7 @@ setTimeout(function(){
     subarea_map.addLayer(CartoDB_Positron);
     subarea_map.addLayer(access);
     subarea_map.addLayer(pline);
+    subarea_map.addLayer(animatedMarker);
     subarea_map.addLayer(stations);
 
 
@@ -224,7 +230,7 @@ setTimeout(function(){
     var overlayMaps = {
         "Subareas": access,
         "Purple Line": pline,
-        "Purple Line Stations":stations
+        "Purple Line Stations": stations
 
     };
 
