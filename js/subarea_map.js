@@ -143,7 +143,7 @@
     }
 
     // omnivore.topojson('/data/geo/subareas.json', null, access).addTo(subarea_map);
-    var access = new L.GeoJSON.AJAX('/data/geo/subareas.json', {
+    var access = new L.GeoJSON.AJAX('data/geo/subareas.json', {
         onEachFeature: onEachFeature,
         style: opplayerstyle,
         opacity: 0.4,
@@ -151,11 +151,11 @@
         weight: 1,
     })
 
-    var pline = new L.GeoJSON.AJAX('/data/geo/pline.json', {
+    var pline = new L.GeoJSON.AJAX('data/geo/pline.json', {
         style: linestyle
     })
 
-    var stations = new L.GeoJSON.AJAX('/data/geo/pstations.json', {
+    var stations = new L.GeoJSON.AJAX('data/geo/pstations.json', {
         pointToLayer: function (feature, latlng) {
             return L.circleMarker(latlng, geojsonMarkerOptions);
         }
