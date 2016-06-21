@@ -50,21 +50,39 @@ var pl_line = [{
     };
 
     info.update = function (props) {
-        this._div.innerHTML = '<h4>Corridor Subarea</h4>' + (props ?
-            '<b> Name : </b>' + props.Subarea : '');
+        this._div.innerHTML = '<h4>Subarea</h4>' + (props ?
+             props.Subarea : '');
     };
 
     info.addTo(subarea_map);
 
 
-    function getColor(d) {
-        return d > 40000 ? '#800026' :
-            d > 20000 ? '#BD0026' :
-            d > 10000 ? '#E31A1C' :
-            d > 5000 ? '#FC4E2A' :
-            d > 2500 ? '#FD8D3C' :
-            d > 1500 ? '#FEB24C' :
-            '#FFEDA0';
+
+
+
+    function opplayerstyle(feature) {
+        switch (feature.properties.Subarea) {
+        case "Bethesda - Chevy Chase":
+            return {
+                color: 'red'
+            };
+        case "International Corridor":
+            return {
+                color: 'orange'
+            };
+        case "Riverdale - New Carrolton":
+            return {
+                color: 'yellow'
+            };
+        case "Silver Spring":
+            return {
+                color: 'green'
+            };
+        case "University of Maryland":
+            return {
+                color: 'blue'
+            };
+        }
     };
 
 
@@ -86,7 +104,7 @@ var pl_line = [{
 
         layer.setStyle({
             weight: 2,
-            color: 'yellow',
+            color: 'gray',
             dashArray: '',
             fillOpacity: 0.7
         });
@@ -137,7 +155,13 @@ var linestyle = {
 }
 
     // omnivore.topojson('/data/geo/subareas.json', null, access).addTo(subarea_map);
-    var access = new L.GeoJSON.AJAX('/data/geo/subareas.json')
+    var access = new L.GeoJSON.AJAX('/data/geo/subareas.json', {
+        onEachFeature: onEachFeature,
+        style: opplayerstyle,
+        opacity: 0.4,
+        fillOpacity: 0.2,
+        weight: 1,
+    })
 
     var pline = new L.GeoJSON.AJAX('/data/geo/pline.json', {style:linestyle} )
 
@@ -210,9 +234,14 @@ setTimeout(function(){
         maxZoom: 19
     });
 
+    var Thunderforest_Transport = L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	maxZoom: 19
+    });
+
 
     subarea_map.setView(new L.LatLng(38.97, -76.98), 12);
-    subarea_map.addLayer(CartoDB_Positron);
+    subarea_map.addLayer(Thunderforest_Transport);
     subarea_map.addLayer(access);
     subarea_map.addLayer(pline);
     subarea_map.addLayer(animatedMarker);
@@ -222,6 +251,7 @@ setTimeout(function(){
 
     //container variable for basemaps     
     var baseMaps = {
+        "Open Transport": Thunderforest_Transport,
         "Positron": CartoDB_Positron,
         "Dark Matter": CartoDB_DarkMatter
     };
