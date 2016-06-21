@@ -1,0 +1,28 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "Chevy Chase Lake", "Platform": "Side", "Longtitude": -77.076337, "Latitude": 38.994773 }, "geometry": { "type": "Point", "coordinates": [ -77.076337388867373, 38.994772694991987 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "Lyttonsville", "Platform": "Center", "Longtitude": -77.053392, "Latitude": 39.000783 }, "geometry": { "type": "Point", "coordinates": [ -77.053391868201018, 39.000783248207192 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "Woodside\/16th Street", "Platform": "Undetermined", "Longtitude": -77.037792, "Latitude": 38.998275 }, "geometry": { "type": "Point", "coordinates": [ -77.03779175695658, 38.998274887768098 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "Takoma\/Langley Transit Center", "Platform": "Center", "Longtitude": -76.988426, "Latitude": 38.989560 }, "geometry": { "type": "Point", "coordinates": [ -76.988426005508401, 38.98956043179804 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "UM Campus Center", "Platform": "Side", "Longtitude": -76.945931, "Latitude": 38.987318 }, "geometry": { "type": "Point", "coordinates": [ -76.945930641228287, 38.987318354771709 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 1, "STA_NAME": "College Park", "Platform": "Center", "Longtitude": -76.928538, "Latitude": 38.977156 }, "geometry": { "type": "Point", "coordinates": [ -76.928537918107196, 38.977156194153707 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "Beacon Heights", "Platform": "Side", "Longtitude": -76.901894, "Latitude": 38.962082 }, "geometry": { "type": "Point", "coordinates": [ -76.901894287927703, 38.962081826306772 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 1, "STA_NAME": "New Carrollton", "Platform": "Center", "Longtitude": -76.872063, "Latitude": 38.948740 }, "geometry": { "type": "Point", "coordinates": [ -76.872062763948506, 38.948740141908644 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "Riggs Road", "Platform": "Center", "Longtitude": -76.980135, "Latitude": 38.984398 }, "geometry": { "type": "Point", "coordinates": [ -76.98013534856986, 38.984398111417285 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 1, "STA_NAME": "Silver Spring Transit Center", "Platform": "Center", "Longtitude": -77.030827, "Latitude": 38.993696 }, "geometry": { "type": "Point", "coordinates": [ -77.030826827560276, 38.993696233969182 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "East Campus", "Platform": "Side", "Longtitude": -76.936416, "Latitude": 38.985500 }, "geometry": { "type": "Point", "coordinates": [ -76.936415570206194, 38.985500390772167 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "M Square", "Platform": "Side", "Longtitude": -76.924352, "Latitude": 38.968360 }, "geometry": { "type": "Point", "coordinates": [ -76.924351995991216, 38.968359595006476 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "Riverdale Park", "Platform": "Side", "Longtitude": -76.918587, "Latitude": 38.959968 }, "geometry": { "type": "Point", "coordinates": [ -76.918587259146392, 38.95996786554899 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "Annapolis Road\/Glenridge", "Platform": "Side", "Longtitude": -76.885117, "Latitude": 38.950948 }, "geometry": { "type": "Point", "coordinates": [ -76.885116792597628, 38.950948086758792 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 1, "STA_NAME": "Bethesda", "Platform": "Undetermined", "Longtitude": -77.094263, "Latitude": 38.982129 }, "geometry": { "type": "Point", "coordinates": [ -77.094262902490073, 38.982129178726318 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "Silver Spring Library", "Platform": "Side", "Longtitude": -77.024548, "Latitude": 38.994831 }, "geometry": { "type": "Point", "coordinates": [ -77.024547604501478, 38.994830906610751 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "Dale Drive", "Platform": "Center", "Longtitude": -77.016622, "Latitude": 38.999310 }, "geometry": { "type": "Point", "coordinates": [ -77.016621678477449, 38.999309794483786 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "Piney Branch Road", "Platform": "Center", "Longtitude": -76.994981, "Latitude": 38.998938 }, "geometry": { "type": "Point", "coordinates": [ -76.994981353586113, 38.998938450954981 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "Adelphi Road\/West Campus", "Platform": "Center", "Longtitude": -76.954836, "Latitude": 38.985361 }, "geometry": { "type": "Point", "coordinates": [ -76.954836262106014, 38.985361199544464 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "Long Branch", "Platform": "Center", "Longtitude": -77.001330, "Latitude": 38.999131 }, "geometry": { "type": "Point", "coordinates": [ -77.001329531433953, 38.999131415904344 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 0, "STA_NAME": "Manchester Place", "Platform": "Center", "Longtitude": -77.007531, "Latitude": 39.001183 }, "geometry": { "type": "Point", "coordinates": [ -77.007530866358493, 39.001183118910575 ] } }
+]
+}
