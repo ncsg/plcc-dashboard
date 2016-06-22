@@ -28,6 +28,15 @@
         maxZoom: 18
     });
 
+    subarea_map.createPane('top');
+    subarea_map.getPane('top').style.zIndex = 6;
+
+    subarea_map.createPane('middle');
+    subarea_map.getPane('middle').style.zIndex = 'auto';
+
+    subarea_map.createPane('bottom');
+    subarea_map.getPane('bottom').style.zIndex = 'auto';
+
 
     var info = L.control();
 
@@ -148,16 +157,20 @@
         opacity: 0.4,
         fillOpacity: 0.2,
         weight: 1,
+        pane: "bottom"
     })
 
     var pline = new L.GeoJSON.AJAX('data/geo/pline.json', {
-        style: linestyle
+        style: linestyle,
+        pane: 'middle'
     })
 
     var stations = new L.GeoJSON.AJAX('data/geo/pstations.json', {
+        pane:"top",
         pointToLayer: function (feature, latlng) {
-            return L.circleMarker(latlng, geojsonMarkerOptions);
-        }
+            return L.circleMarker(latlng, geojsonMarkerOptions, {
+                                 pane: 'top'} );    
+        },
     })
 
     var purple = new L.geoJson(pl_line);
@@ -249,9 +262,9 @@
 
     //container variable for overlays
     var overlayMaps = {
-        "Subareas": access,
+        "Purple Line Stations": stations,
         "Purple Line": pline,
-        "Purple Line Stations": stations
+        "Subareas": access
 
     };
 
