@@ -39,8 +39,7 @@
 
     info.update = function (props) {
         this._div.innerHTML = '<h4>' + (props ?
-            props.Subarea : +'</h4>');
-    };
+            '<h4>' +  props.Subarea +'</h4>':'');};
 
     info.addTo(subarea_map);
 
