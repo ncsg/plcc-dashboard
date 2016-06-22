@@ -82,10 +82,6 @@
 
 	<body onload="setViewFunction()">
 		<div>
-			<!--script src="//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js"></script>
-			<script> 
-				umdHeader.init(); 
-			</script-->
 		</div>
 		<div class="container">	
 			<header id="site-header">
@@ -139,7 +135,7 @@
 			<div class="container">
 				<div class="row">
 					<main class="col-md-12">
-						<h2>Purple Line Corridor Data Dashboard</h2>
+                        <h2><span style="display: block; margin: 0px auto; text-align:center">Purple Line Corridor Data Dashboard</span></h2>
 						<article class="post">
 							<div class="entry-content clearfix">
 								<div class="col-md-12" id="map container" style="padding-left: 0px !important; padding-right: 0px !important;">
@@ -227,10 +223,11 @@
 				<div class="container">
 					<div class="row">
 	  					<hr style="margin-top:0; margin-bottom:0;">
-						<div class="col-md-8">
-							<p>© National Center for Smart Growth at The University of Maryland, College Park</p>
+                        <div class="col-md-5" style="text-align:left;"><img class="img-responsive" src="img/ncsg_horizontal.jpg" style="width : 50%;"></div>
+						<div class="col-md-2" style="text-align:center">
+                            <p style="font-size: 0.7em">© National Center for Smart Growth at The University of Maryland, College Park</p>
 						</div>
-						<div class="col-md-4" style="text-align:right;"><img src="img/umdLogo.png" style="width : 40%;"></div>
+						<div class="col-md-5" style="text-align:right; margin-top:35px"><img class="img-responsive" src="img/umdLogo.png" style="width : 50%;"></div>
 					</div>
 				</div>
 			</footer>
@@ -250,24 +247,8 @@
 				</ul>
 			</nav>
 		</div>
-		<script src="js/script.js"></script>
-		<script type="text/javascript">
-		    $(function () {
-				
-				$(".demo2").bootstrapNews({
-		            newsPerPage: 3,
-		            autoplay: true,
-					pauseOnHover: true,
-					navigation: false,
-		            direction: 'down',
-		            newsTickerInterval: 2000,
-		            onToDo: function () {
-		                //console.log(this);
-		            }
-		        });
-		    });
-		</script>
 		
+        <script src="js/script.js"></script>
         <!--subarea map-->
         <script src="data/geo/subareas.json"></script>
         <script src="js/subarea_map.js"></script>
@@ -305,12 +286,7 @@
 			    e.preventDefault();// prevent the default anchor functionality
 			});
 		</script>
-    <!-- 
-        So we can test this locally without running a server
-        otherwise it tries to make an XMLHttpRequest.
 
-        CONS: Not cached.
-     -->
      
 	</body>
 </html>
