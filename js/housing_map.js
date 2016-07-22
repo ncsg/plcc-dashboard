@@ -28,14 +28,6 @@
         maxZoom: 18
     });
 
-    subarea_map.createPane('top');
-    subarea_map.getPane('top').style.zIndex = 6;
-
-    subarea_map.createPane('middle');
-    subarea_map.getPane('middle').style.zIndex = 'auto';
-
-    subarea_map.createPane('bottom');
-    subarea_map.getPane('bottom').style.zIndex = 'auto';
 
 
     var info = L.control();
@@ -53,6 +45,31 @@
     info.addTo(subarea_map);
 
 
+
+
+    var heatmap = new L.NonTiledLayer.WMS("http://aws.knaaptime.com:8080/geoserver/wms", {
+        opacity: 1.0,
+        layers: 'postgis:HCV Public',
+        format: 'image/png',
+        transparent: true,
+        attribution: "<a href='http://egis.hud.opendata.arcgis.com/datasets/8d45c34f7f64433586ef6a448d00ca12_0'>HUD</a>"
+    });
+
+var ph_heatmap = new L.NonTiledLayer.WMS("http://aws.knaaptime.com:8080/geoserver/wms", {
+        opacity: 1.0,
+        layers: 'postgis:md_ph',
+        format: 'image/png',
+        transparent: true,
+        attribution: "<a href='http://egis.hud.opendata.arcgis.com/datasets/30a24b3904aa4f6b8c65e471805c27fc_0'>HUD</a>"
+    });
+
+var lihtc_heatmap = new L.NonTiledLayer.WMS("http://aws.knaaptime.com:8080/geoserver/wms", {
+        opacity: 1.0,
+        layers: 'postgis:md_lihtc',
+        format: 'image/png',
+        transparent: true,
+        attribution: "<a href='http://egis.hud.opendata.arcgis.com/datasets/2b10d5afe18c40e7a16171f5bc1812cd_0'>HUD</a>"
+    });
 
 
 
@@ -248,8 +265,9 @@
     subarea_map.addLayer(Thunderforest_Transport);
     subarea_map.addLayer(access);
     subarea_map.addLayer(pline);
-    subarea_map.addLayer(animatedMarker);
     subarea_map.addLayer(stations);
+    subarea_map.addLayer(heatmap);
+
 
 
 
@@ -264,10 +282,14 @@
     var overlayMaps = {
         "Purple Line Stations": stations,
         "Purple Line": pline,
-        "Subareas": access
+        "Subareas": access,
+        "Housing Choice Vouchers": heatmap,
+        "Low-Income Housing Tax Credit": lihtc_heatmap,
+        "Public Housing": ph_heatmap,
 
     };
 
 
     //create layer switcher
     L.control.layers(baseMaps, overlayMaps).addTo(subarea_map);
+

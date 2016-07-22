@@ -1218,7 +1218,7 @@ $(function () {
             type: 'area'
         },
         title: {
-            text: 'Owner vs Renter occupied Housing units - Silver Springs'
+            text: 'Owner vs Renter occupied Housing units - Silver Spring'
         },
         subtitle: {
             text: ''
