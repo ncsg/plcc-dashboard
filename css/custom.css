@@ -995,3 +995,7 @@ thead th {
 		min-height: 34px;
 	}
 }
+
+.hideGraph{
+display:none !important;
+}
