@@ -293,3 +293,5 @@ var lihtc_heatmap = new L.NonTiledLayer.WMS("http://aws.knaaptime.com:8080/geose
     //create layer switcher
     L.control.layers(baseMaps, overlayMaps).addTo(subarea_map);
 
+   subarea_map.scrollWheelZoom.disable();
+

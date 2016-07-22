@@ -137,7 +137,8 @@
                         <h2><span style="display: block; margin: 0px auto; text-align:center">Housing Trends in the Purple Line Corridor</span></h2>
                         <i><h3><span style="display: block; margin: 0px auto; text-align:center">Ensuring Housing Choices for All</span></h3></i>
 					</main>
-					<div class="row">
+                                                <div class="row">
+
 						<div class="col-md-5">
                             <br>
                             <h4><b>Goal:</b> Balanced housing options for people of all income levels in communities throughout the corridor</h4><br>
@@ -190,7 +191,8 @@
 							  </div>
 							</div>
 						</div>
-													<div class="col-md-7">
+							
+                        <div class="col-md-7">
 								<table id="table-sparkline">
 								    <thead>
 								        <tr style="background-color: gainsboro;">
@@ -255,22 +257,28 @@
 								</table>
 								<div id="tableDesc" style="margin-top: 3%; margin-left: 7%;"> </div>
 							</div>
-									
-                        
+                        </div>
+				<hr>					
+                        <div class="row" style="margin-top:15px">
                         <div class="col-md-12" id="map container" style="padding-left: 0px !important; padding-right: 0px !important;">
-                                        <h3>Subsidized Housing</h3>    
-                            <div class='map' id="subarea_map" style="height: 340px">
+                            <h3>Subsidized Housing</h3>    
+                            <div id="subarea_map" style="height: 340px">
                                             </div>
-								</div>
+                            </div>
+                        </div>
                         
-						<div class="row">	
+		<hr>
+                        <div class="row" style="margin-top:15px">
+                            <br>
+                            <h3>Key Indicators Over Time</h3>
+						<div class="row center-block text-center" style="display: block; margin: 0px auto; text-align:center center-block">	
 						<div class="col-md-3 btn-group">
 						
-						<button class="btn btn-primary dropdown-toggle" type="button" id="graphButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top: 20px">
-						Owner vs Renter occupied Housing Units 
+						<button class="btn btn-primary dropdown-toggle" type="button" id="graphButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top: 20px">
+						Owner vs Renter Occupancy
     					<span class="caret"></span>
   						</button>
-						<ul class="dropdown-menu" aria-labelledby="graphButton">
+						<ul class="dropdown-menu" aria-labelledby="graphButton2">
     						<li><a href="#" data-div="compareHouseDivBethesda" class="graphsMenu" data-hover="Gentrification" style="font-size: 14px !important; margin-left: 8px !important;">
 							Bethesda Chevy Chase</a></li>
 							<li><a href="#" data-div="compareHouseDivSS" class="graphsMenu" data-hover="Gentrification" style="font-size: 14px !important; margin-left: 8px !important;">
@@ -285,11 +293,11 @@
 							</div>
 							
 							<div class="col-md-3 btn-group dropdown">
-						<button class="btn btn-success dropdown-toggle" type="button" id="graphButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-top: 20px">
-						 Affordable Housing for Owners 
+						<button class="btn btn-success dropdown-toggle" type="button" id="graphButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-top: 20px">
+						 Affordable Housing (Owners) 
     					<span class="caret"></span>
   						</button>
-						<ul class="dropdown-menu" aria-labelledby="graphButton2">
+						<ul class="dropdown-menu" aria-labelledby="graphButton3">
     						<li><a href="#" data-div="OwnerAffordabilityBethesda" class="graphsMenu" data-hover="Gentrification" style="font-size: 14px !important; margin-left: 8px !important;">
 							Bethesda Chevy Chase</a></li>
 							<li><a href="#" data-div="OwnerAffordabilitySS" class="graphsMenu" data-hover="Gentrification" style="font-size: 14px !important; margin-left: 8px !important;">
@@ -306,7 +314,7 @@
 							
 							<div class="col-md-3 btn-group dropdown">
 						<button class="btn btn-info dropdown-toggle" type="button" id="graphButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-top: 20px">
-						Affordable Housing for Renters 
+						Affordable Housing (Renters) 
     					<span class="caret"></span>
   						</button>
 						<ul class="dropdown-menu" aria-labelledby="graphButton3">
@@ -324,11 +332,11 @@
 							</div>
 							
 							<div class="col-md-3 btn-group dropdown">
-						<button class="btn btn-warning dropdown-toggle" type="button" id="graphButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-top: 20px">
-						Number of Houses by type
+						<button class="btn btn-warning dropdown-toggle" type="button" id="graphButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-top: 20px">
+						Housing by Type
     					<span class="caret"></span>
   						</button>
-						<ul class="dropdown-menu" aria-labelledby="graphButton4">
+						<ul class="dropdown-menu" aria-labelledby="graphButton3">
     						<li><a href="#" data-div="HousesBethesda" class="graphsMenu" data-hover="Gentrification" style="font-size: 14px !important; margin-left: 8px !important;">
 							Bethesda Chevy Chase</a></li>
 							<li><a href="#" data-div="HousesSS" class="graphsMenu" data-hover="Gentrification" style="font-size: 14px !important; margin-left: 8px !important;">
@@ -344,135 +352,55 @@
   						
 						
 						
-    					</div>
-						</div>
 						</div>
 
-						
-						
-						
-						<div class="row "> 
+				    <div class="row "> 
 							<div class="col-md-12">
 								<div id="compareHouseDivBethesda" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
 								<div id="compareHouseDivSS" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
 								<div id="compareHouseDivIC" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
 								<div id="compareHouseDivUMD" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
 								<div id="compareHouseDivNC" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
 						
 						
-						
-						
-						
-						<div class="row "> 
-							<div class="col-md-12">
-								<div id="OwnerAffordabilityBethesda" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
+				                <div id="OwnerAffordabilityBethesda" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
 								<div id="OwnerAffordabilitySS" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
 								<div id="OwnerAffordabilityIC" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
-								<div id="OwnerAffordabilityUMD" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
 								<div id="OwnerAffordabilityNC" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						
-						
-						
-						<div class="row "> 
-							<div class="col-md-12">
+
+                                
 								<div id="HousesBethesda" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
 								<div id="HousesSS" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
 								<div id="HousesIC" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
 								<div id="HousesUMD" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
 								<div id="HousesNC" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						
-						
-						<div class="row "> 
-							<div class="col-md-12">
+	
+                                
 								<div id="RenterAffordabilityBethesda" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
 								<div id="RenterAffordabilitySS" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
 								<div id="RenterAffordabilityIC" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
 								<div id="RenterAffordabilityUMD" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
-							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-12">
 								<div id="RenterAffordabilityNC" style="min-width: 95%; height: 400px; margin: 0 auto" class="graphDivs hideGraph"></div>
 							</div>
-						</div>
+						</div>						
+ 
+            </div>
 						
-						<hr>
-						<div class="row">
+                <br>
+                <br>
+                <hr>
+                
+						<div class="row" style="margin-top:10px">
+                            <h3>Key Indicators Across Subareas</h3>
 							<div class="col-md-12">
 								<div style="text-align: right">
 									<div class="dropdown">
-						  				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select a Subarea
+						  				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select Unit Size
 						  				<span class="caret"></span></button>
 						  				<ul class="dropdown-menu dropdown-menu-right">
-						  					<li><a href="#" id="Renter1B">One Bedroom Rental Housing</a></li>
-						    				<li><a href="#" id="Renter2B">Two Bedroom Rental Housing</a></li>
-						    				<li><a href="#" id="Renter3B">Three Bedroom Rental Housing</a></li>
+						  					<li><a href="#" id="Renter1B">One Bedroom Rental</a></li>
+						    				<li><a href="#" id="Renter2B">Two Bedroom Rental</a></li>
+						    				<li><a href="#" id="Renter3B">Three Bedroom Rental</a></li>
 						  				</ul>
 									</div>
 								</div>
@@ -486,19 +414,21 @@
 								<div id="affordableRenter3B" style="min-width: 310px; height: 400px; margin: 0 auto" ></div>
 							</div>
 						</div>
-						
 				</div>
-		<footer id="site-footer">
-			<div class="container">
-				<div class="row">
-  					<hr style="margin-top:0; margin-bottom:0;">
-					<div class="col-md-8">
-						<p>© National Center for Smart Growth at The University of Maryland, College Park</p>
+	
+				</div>
+			<footer id="site-footer">
+				<div class="container">
+					<div class="row" style="text-align:center">
+	  					<hr style="margin-top:0; margin-bottom:0;">
+                        <div class="col-md-5" ><img class="img-responsive" src="img/ncsg_horizontal.jpg" style="width : 50%;"></div>
+						<div class="col-md-2" style="text-align:center">
+                            <p style="line-height: 15px; font-size: 0.7em">© National Center for Smart Growth at The University of Maryland, College Park</p>
+						</div>
+						<div class="col-md-5" style="margin-top:38px"><img class="img-responsive" src="img/umdLogo.png" style="width : 50%;"></div>
 					</div>
-					<div class="col-md-4" style="text-align:right;"><img src="img/umdLogo.png" style="width : 40%;"></div>
 				</div>
-			</div>
-		</footer>
+			</footer>
 
 		<!-- Mobile Menu -->
 		<div class="overlay overlay-hugeinc">
@@ -522,7 +452,7 @@
         <script src="js/housing_map.js"></script>
         
 
-		<script>
+			<script>
 			$('#Renter1B').click(function(e) {
 			    showDiv(1);
 			    e.preventDefault();// prevent the default anchor functionality
@@ -537,7 +467,7 @@
 			    showDiv(3);
 			    e.preventDefault();// prevent the default anchor functionality
 			});
-            	
+			
 			$('.graphsMenu').click(function (e){
 				$('.graphDivs').addClass('hideGraph');
 				$('#'+$(this).attr('data-div')).removeClass('hideGraph');
