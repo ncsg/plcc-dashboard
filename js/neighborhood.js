@@ -1085,23 +1085,23 @@ $(function () {
             colorByPoint: true,
             data: [{
                 name: 'Bethesda - Chevy Chase',
-                y: 1776,
+                y: 1762,
                 drilldown: 'Bethesda - Chevy Chase'
             }, {
                 name: 'Silver Spring',
-                y: 5232,
+                y: 5897,
                 drilldown: 'Silver Spring'
             }, {
                 name: 'International Corridor',
-                y: 7274,
+                y: 6625,
                 drilldown: 'International Corridor'
             }, {
                 name: 'University of Maryland',
-                y: 1453,
+                y: 1301,
                 drilldown: 'University of Maryland'
             }, {
                 name: 'Riverdale - New Carrollton',
-                y: 4187,
+                y: 4212,
                 drilldown: 'Riverdale - New Carrollton'
             }]
         }],
