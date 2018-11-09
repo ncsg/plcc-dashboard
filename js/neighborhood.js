@@ -1085,7 +1085,7 @@ $(function () {
             colorByPoint: true,
             data: [{
                 name: 'Bethesda - Chevy Chase',
-                y: 1761,
+                y: 1762,
                 drilldown: 'Bethesda - Chevy Chase'
             }, {
                 name: 'Silver Spring',
