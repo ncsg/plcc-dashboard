@@ -16,7 +16,7 @@ $(function () {
             text: 'Population By Race - Distribution'
         },
         subtitle: {
-            text: 'As of Year - 2014'
+            text: 'As of Year - 2016'
         },
         xAxis: {
             categories: ['Bethesda - Chevy Chase', 'Silver Spring', 'International Corridor', 'University of Maryland', 'Riverdale - New Carrollton']
@@ -37,16 +37,16 @@ $(function () {
         },
         series: [{
             name: 'White',
-            data: [17421, 19641, 17196,  14321, 12115]
+            data: [15737, 16396, 7021,  11840, 2676]
         }, {
             name: 'Black',
-            data: [1181, 10898, 13509, 3638, 15455]
+            data: [1138, 11185, 12685, 3103, 13615]
         }, {
             name: 'Asian',
-            data: [2483, 3204, 3001, 3275, 971]
+            data: [1544, 2525, 2611, 3291, 865]
         }, {
             name: 'Hispanic',
-            data: [1429, 4419, 35832, 1902, 11525]
+            data: [1707, 5094, 34711, 1924, 14719]
         }]
     });
 });
