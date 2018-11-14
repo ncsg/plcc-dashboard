@@ -397,23 +397,23 @@ $(function () {
                     colorByPoint: true,
                     data: [{
                         name: 'Bethesda',
-                        y: 1429,
+                        y: 1707,
                         drilldown: 'Bethesda'
                     }, {
                         name: 'Silver Spring',
-                        y: 4419,
+                        y: 5094,
                         drilldown: 'Silver Spring'
                     },{
                         name: 'International Corridor',
-                        y: 35832,
+                        y: 34711,
                         drilldown: 'International Corridor'
                     },{
                         name: 'University of Maryland',
-                        y: 1902,
+                        y: 1924,
                         drilldown: 'University of Maryland'
                     },{
                         name: 'Riverdale - New Carrollton',
-                        y: 11525,
+                        y: 14719,
                         drilldown: 'Riverdale - New Carrollton'
                     }]
                 }],
@@ -568,23 +568,23 @@ $(function () {
                     colorByPoint: true,
                     data: [{
                         name: 'Bethesda',
-                        y: 17421,
+                        y: 15737,
                         drilldown: 'Bethesda'
                     }, {
                         name: 'Silver Spring',
-                        y: 19641,
+                        y: 16396,
                         drilldown: 'Silver Spring'
                     },{
                         name: 'International Corridor',
-                        y: 17196,
+                        y: 7021,
                         drilldown: 'International Corridor'
                     },{
                         name: 'University of Maryland',
-                        y: 14321,
+                        y: 11840,
                         drilldown: 'University of Maryland'
                     },{
                         name: 'Riverdale - New Carrollton',
-                        y: 12115,
+                        y: 2676,
                         drilldown: 'Riverdale - New Carrollton'
                     }]
                 }],
@@ -739,23 +739,23 @@ $(function () {
                     colorByPoint: true,
                     data: [{
                         name: 'Bethesda - Chevy Chase',
-                        y: 1181,
+                        y: 1138,
                         drilldown: 'Bethesda - Chevy Chase'
                     }, {
                         name: 'Silver Spring',
-                        y: 10898,
+                        y: 11185,
                         drilldown: 'Silver Spring'
                     },{
                         name: 'International Corridor',
-                        y: 13509,
+                        y: 12685,
                         drilldown: 'International Corridor'
                     },{
                         name: 'University of Maryland',
-                        y: 3638,
+                        y: 3103,
                         drilldown: 'University of Maryland'
                     },{
                         name: 'Riverdale - New Carrollton',
-                        y: 15455,
+                        y: 13615,
                         drilldown: 'Riverdale - New Carrollton'
                     }]
                 }],
@@ -910,23 +910,23 @@ $(function () {
                     colorByPoint: true,
                     data: [{
                         name: 'Bethesda - Chevy Chase',
-                        y: 2483,
+                        y: 1544,
                         drilldown: 'Bethesda - Chevy Chase'
                     }, {
                         name: 'Silver Spring',
-                        y: 3204,
+                        y: 2525,
                         drilldown: 'Silver Spring'
                     },{
                         name: 'International Corridor',
-                        y: 3001,
+                        y: 2611,
                         drilldown: 'International Corridor'
                     },{
                         name: 'University of Maryland',
-                        y: 3275,
+                        y: 3291,
                         drilldown: 'University of Maryland'
                     },{
                         name: 'Riverdale - New Carrollton',
-                        y: 971,
+                        y: 865,
                         drilldown: 'Riverdale - New Carrollton'
                     }]
                 }],
