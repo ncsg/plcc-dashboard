@@ -364,7 +364,7 @@ $(function () {
                     type: 'column',
                 },
                 title: {
-                    text: 'Hispanic Population (Year 2014)'
+                    text: 'Hispanic Population (Year 2016)'
                 },
                 subtitle: {
                     text: 'Click the columns to view data over the years'
@@ -535,7 +535,7 @@ $(function () {
                     type: 'column',
                 },
                 title: {
-                    text: 'White Population (Year 2014)'
+                    text: 'White Population (Year 2016)'
                 },
                 subtitle: {
                     text: 'Click the columns to view data over the years.'
@@ -706,7 +706,7 @@ $(function () {
                     type: 'column',
                 },
                 title: {
-                    text: 'Black Population (Year 2014)'
+                    text: 'Black Population (Year 2016)'
                 },
                 subtitle: {
                     text: 'Click the columns to view data over the years'
@@ -877,7 +877,7 @@ $(function () {
                     type: 'column',
                 },
                 title: {
-                    text: 'Asian Population (Year 2014)'
+                    text: 'Asian Population (Year 2016)'
                 },
                 subtitle: {
                     text: 'Click the columns to view data over the years'
