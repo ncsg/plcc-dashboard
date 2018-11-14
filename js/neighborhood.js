@@ -60,7 +60,7 @@ $(function () {
             text: 'Population By Race - Percentage'
         },
         subtitle: {
-            text: 'As of Year - 2014'
+            text: 'As of Year - 2016'
         },
         xAxis: {
             categories: ['Bethesda - Chevy Chase', 'Silver Spring', 'International Corridor', 'University of Maryland', 'Riverdale - New Carrollton']
