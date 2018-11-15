@@ -1240,23 +1240,23 @@ $(function () {
             colorByPoint: true,
             data: [{
                 name: 'Bethesda - Chevy Chase',
-                y: 2161,
+                y: 2092,
                 drilldown: 'Bethesda - Chevy Chase'
             }, {
                 name: 'Silver Spring',
-                y: 5895,
+                y: 5585,
                 drilldown: 'Silver Spring'
             }, {
                 name: 'International Corridor',
-                y: 5871,
+                y: 5866,
                 drilldown: 'International Corridor'
             }, {
                 name: 'University of Maryland',
-                y: 664,
+                y: 762,
                 drilldown: 'University of Maryland'
             }, {
                 name: 'Riverdale - New Carrollton',
-                y: 3592,
+                y: 3272,
                 drilldown: 'Riverdale - New Carrollton'
             }]
         }],
@@ -1394,23 +1394,23 @@ $(function () {
             colorByPoint: true,
             data: [{
                 name: 'Bethesda - Chevy Chase',
-                y: 1373,
+                y: 1513,
                 drilldown: 'Bethesda - Chevy Chase'
             }, {
                 name: 'Silver Spring',
-                y: 3052,
+                y: 3165,
                 drilldown: 'Silver Spring'
             }, {
                 name: 'International Corridor',
-                y: 2478,
+                y: 2656,
                 drilldown: 'International Corridor'
             }, {
                 name: 'University of Maryland',
-                y: 444,
+                y: 382,
                 drilldown: 'University of Maryland'
             }, {
                 name: 'Riverdale - New Carrollton',
-                y: 1127,
+                y: 1335,
                 drilldown: 'Riverdale - New Carrollton'
             }]
         }],
@@ -1549,23 +1549,23 @@ $(function () {
             colorByPoint: true,
             data: [{
                 name: 'Bethesda - Chevy Chase',
-                y: 1237,
+                y: 1354,
                 drilldown: 'Bethesda - Chevy Chase'
             }, {
                 name: 'Silver Spring',
-                y: 1505,
+                y: 1590,
                 drilldown: 'Silver Spring'
             }, {
                 name: 'International Corridor',
-                y: 950,
+                y: 961,
                 drilldown: 'International Corridor'
             }, {
                 name: 'University of Maryland',
-                y: 160,
+                y: 246,
                 drilldown: 'University of Maryland'
             }, {
                 name: 'Riverdale - New Carrollton',
-                y: 463,
+                y: 449,
                 drilldown: 'Riverdale - New Carrollton'
             }]
         }],
@@ -1666,7 +1666,7 @@ $(function () {
             type: 'column'
         },
         title: {
-            text: 'Income by group ($150,000 to $199,999)'
+            text: 'Income by group ($200,000 and more)'
         },
         subtitle: {
             text: 'Click the columns to view trends over the years.'
@@ -1703,23 +1703,23 @@ $(function () {
             colorByPoint: true,
             data: [{
                 name: 'Bethesda - Chevy Chase',
-                y: 2917,
+                y: 2877,
                 drilldown: 'Bethesda - Chevy Chase'
             }, {
                 name: 'Silver Spring',
-                y: 1495,
+                y: 1623,
                 drilldown: 'Silver Spring'
             }, {
                 name: 'International Corridor',
-                y: 672,
+                y: 726,
                 drilldown: 'International Corridor'
             }, {
                 name: 'University of Maryland',
-                y: 367,
+                y: 331,
                 drilldown: 'University of Maryland'
             }, {
                 name: 'Riverdale - New Carrollton',
-                y: 367,
+                y: 165,
                 drilldown: 'Riverdale - New Carrollton'
             }]
         }],
