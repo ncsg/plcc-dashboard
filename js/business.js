@@ -16,7 +16,7 @@ $(function () {
             text: 'Total Jobs by Sector'
         },
         subtitle: {
-            text: 'Snapshot 2014'
+            text: 'Snapshot 2017 business quarter 4'
         },
         xAxis: {
             categories: ['Bethesda - Chevy Chase','Silver Spring','International Corridor','University of Maryland', 'Riverdale - New Carrollton']
@@ -38,17 +38,17 @@ $(function () {
         },
         series: [{
             name: 'Office',
-            data: [21500,14550,2101,5911,10939]
+            data: [22633, 14791, 4640, 21523, 12976]
         }, {
             name: 'Retail',
-            data: [3287,2226,1343,469,1383]
+            data: [6382,2153,1307,380,1326]
         }, {
             name: 'Industrial',
-            data: [539,450,78,11,6693]
+            data: [449,357,70,19,624]
             
         }, {
             name: 'Other',
-            data: [11243,9526,3860,1424,2229]
+            data: [19602,11589,2421,1761,9843]
         },]
     });
 });
@@ -224,7 +224,7 @@ $(function () {
             text: 'Total Number of Jobs by Firm Size'
         },
         subtitle: {
-                text: 'Source: QCEW (2013)' 
+                text: 'Source:QCEW (2017 business quarter 4)' 
         },
         xAxis: {
             categories: ['Bethesda - Chevy Chase', 'Silver Spring', 'International Corridor', 'University of Maryland', 'Riverdale - New Carrollton']
@@ -263,19 +263,19 @@ $(function () {
         },
         series: [{
             name: 'Less than 5',
-            data: [1278, 856, 340, 109, 242]
+            data: [1623,1152,537,151,324]
         }, {
             name: '5-9',
-            data: [338, 291, 125, 38, 109]
+            data: [341,297,115,58,116]
         }, {
             name: '10-19',
-            data: [289, 217, 66, 32, 70]
+            data: [282,221,67,29,85]
         }, {
             name: '20-49',
-            data: [197, 179, 40, 27, 74]
+            data: [216,168,63,36,72]
         }, {
             name: '>50',
-            data: [160, 110, 28, 17, 46]
+            data: [168,124,28,22,49]
         }]
     });
 });
