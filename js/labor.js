@@ -787,16 +787,16 @@ $(function () {
         },
         series: [{
             name: 'Less than High School',
-            data: [557, 1835, 3997, 716, 2251]
+            data: [760, 1884, 4029, 623, 2421]
         }, {
             name: 'High School or Equivalent',
-            data: [1073, 2625, 3569, 817, 2659]
+            data: [1474, 3089, 3865, 933, 2807]
         }, {
             name: 'Some College',
-            data: [1401, 3368, 3796, 974, 2768]
+            data: [1887, 3908, 4348, 1071, 2961]
         }, {
             name: 'Bachelors Degree or Advanced',
-            data: [3962, 5326, 4265, 1155, 2083]
+            data: [4006, 6249, 4996, 1365, 2596]
         }]
     });
 });
