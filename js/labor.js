@@ -13,7 +13,7 @@ $(function () {
             text: 'Travel pattern by Subarea'
         },
         subtitle: {
-            text: 'Snapshot: 2014'
+            text: 'Snapshot: 2016'
         },
         xAxis: {
             categories: ['Bethesda', 'Silver Spring', 'International Corridor', 'University of Maryland', 'New Carrolton']
@@ -31,27 +31,27 @@ $(function () {
         series: [{
             type: 'column',
             name: 'Drivealone',
-            data: [4666, 9614, 12002, 2695, 7787]
+            data: [5714, 10643, 14229, 2711, 9135]
         }, {
             type: 'column',
             name: 'Carpool',
-            data: [540, 1773, 4655, 280, 2758]
+            data: [744, 1466, 8422, 579, 2849]
         }, {
             type: 'column',
             name: 'Public Train',
-            data: [1468, 5768, 4759, 525, 2376.5]
+            data: [2577, 8044, 7349, 1074, 2754]
         }, {
             type: 'column',
             name: 'Bicycle',
-            data: [49, 86, 51, 149, 10.5]
+            data: [217, 182, 104, 278, 24]
         },{
             type: 'column',
             name: 'Walk',
-            data: [611, 772, 434, 600, 304.5]
+            data: [1219, 1193, 969, 2538, 368]
         },{
             type: 'column',
             name: 'Work at Home',
-            data: [553, 720, 447, 90, 249.5]
+            data: [1027, 1034, 688, 588, 147]
         },{
             type: 'pie',
             name: 'Neighborhood travel pattern',
@@ -444,7 +444,7 @@ $(function () {
                 text: 'Job-Housing Balance by Education Level'
             },
             subtitle: {
-                text: 'Bethesda <br> (Snapshot 2014)'
+                text: 'Bethesda <br> (Snapshot 2016)'
             },
             xAxis: [{
                 categories: categories,
@@ -486,10 +486,10 @@ $(function () {
 
             series: [{
                 name: 'Workers by Workplace',
-                data: [-4726,-3861,-5742,-7539]
+                data: [-4124,-6136,-8008,-12101]
             }, {
                 name: 'Workers by Residence',
-                data: [721,1367,1895,4087
+                data: [760,1474,1887,4006
 ]
             }]
         });
@@ -508,7 +508,7 @@ $(function () {
                 text: 'Job-Housing Balance by Education Level'
             },
             subtitle: {
-                text: 'International Corridor <br> (Snapshot 2014)'
+                text: 'International Corridor <br> (Snapshot 2016)'
             },
             xAxis: [{
                 categories: categories,
@@ -550,10 +550,10 @@ $(function () {
 
             series: [{
                 name: 'Workers by Workplace',
-                data: [-1637,-1182,-1357,-1615]
+                data: [-1114,-1152,-1288,-1360]
             }, {
                 name: 'Workers by Residence',
-                data: [4123,4078,4338,4749
+                data: [4029,3865,4348,4996
 ]
             }]
         });
@@ -572,7 +572,7 @@ $(function () {
                 text: 'Job-Housing Balance by Education Level'
             },
             subtitle: {
-                text: 'Riverdale - New Carrolton <br> (Snapshot 2014)'
+                text: 'Riverdale - New Carrolton <br> (Snapshot 2016)'
             },
             xAxis: [{
                 categories: categories,
@@ -614,10 +614,10 @@ $(function () {
 
             series: [{
                 name: 'Workers by Workplace',
-                data: [-13490,-12300,-20983,-25606]
+                data: [-2156,-5548,-5417,-6084]
             }, {
                 name: 'Workers by Residence',
-                data: [9654,12114,13752,18688
+                data: [2421,2807,2961,2596
 ]
             }]
         });
@@ -633,10 +633,10 @@ $(function () {
                 type: 'bar'
             },
             title: {
-                text: 'Job-Housing Balance by Education Level (Snapshot 2014)'
+                text: 'Job-Housing Balance by Education Level (Snapshot 2016)'
             },
             subtitle: {
-                text: 'Silver Spring'
+                text: 'Silver Spring <br> (Snapshot 2016)'
             },
             xAxis: [{
                 categories: categories,
@@ -678,10 +678,10 @@ $(function () {
 
             series: [{
                 name: 'Workers by Workplace',
-                data: [-3764,-3161,-4800,-5831]
+                data: [-3271,-4991,-5926,-9181]
             }, {
                 name: 'Workers by Residence',
-                data: [1712,2822,3542,5839
+                data: [1884,3089,3908,6249
 ]
             }]
         });
@@ -700,7 +700,7 @@ $(function () {
                 text: 'Job-Housing Balance by Education Level'
             },
             subtitle: {
-                text: 'University of Maryland (Snapshot 2014)'
+                text: 'University of Maryland (Snapshot 2016)'
             },
             xAxis: [{
                 categories: categories,
@@ -742,10 +742,10 @@ $(function () {
 
             series: [{
                 name: 'Workers by Workplace',
-                data: [-1795,-1721,-3321,-4616]
+                data: [-1757,-3505,-4773,-8890]
             }, {
                 name: 'Workers by Residence',
-                data: [627,940,1010,1352
+                data: [623,933,1071,1365
 ]
             }]
         });
