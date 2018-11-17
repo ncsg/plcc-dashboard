@@ -323,19 +323,19 @@ $(function () {
             colorByPoint: true,
             data: [{
                 name: 'Office',
-                y:  74867,
+                y: 85,791 ,
                 drilldown: 'Office'
             }, {
                 name: 'Retail',
-                y: 43765,
+                y: 30,189 ,
                 drilldown: 'Retail'
             }, {
                 name: 'Industrial',
-                y: 50556,
+                y: 88,180 ,
                 drilldown: 'Industrial'
             }, {
                 name: 'Other',
-                y: 35933,
+                y: 48,100 ,
                 drilldown: 'Other'
             }]
         }],
