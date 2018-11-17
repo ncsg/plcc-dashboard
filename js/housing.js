@@ -1170,7 +1170,7 @@ $(function () {
             text: ''
         },
         xAxis: {
-            categories: ['2000','2005-2009','2008-2012','2010-2014'],
+            categories: ['2000','2005-2009','2008-2012','2010-2014', '2011-2015', '2012-2016'],
             tickmarkPlacement: 'on',
             title: {
                 enabled: false
@@ -1203,10 +1203,10 @@ $(function () {
         },
         series: [{
             name: 'Bethesda Owner Occupied',
-            data: [6729, 7090, 7154, 7224]
+            data: [6729, 7090, 7154, 4874, 4929, 4985]
         }, {
             name: 'Bethesda Renter Occupied',
-            data: [5153,5242,5502,5812]
+            data: [5153,5242,5502,4590, 4602, 4613]
         }
         ]
     });
@@ -1224,7 +1224,7 @@ $(function () {
             text: ''
         },
         xAxis: {
-            categories: ['2000','2005-2009','2008-2012','2010-2014'],
+            categories: ['2000','2005-2009','2008-2012','2010-2014', '2011-2015', '2012-2016'],
             tickmarkPlacement: 'on',
             title: {
                 enabled: false
@@ -1257,10 +1257,10 @@ $(function () {
         },
         series: [{
             name: 'Silver Spring Owner Occupied',
-            data: [5558, 5717, 6615, 6519]
+            data: [5558, 5717, 6615, 5158, 5018, 4861]
         }, {
             name: 'Silver Spring Occupied',
-            data: [10406,9964,11273,12251]
+            data: [10406,9964,11273,12021, 12607, 12999]
         }
         ]
     });
@@ -1278,7 +1278,7 @@ $(function () {
             text: ''
         },
         xAxis: {
-            categories: ['2000','2005-2009','2008-2012','2010-2014'],
+            categories: ['2000','2005-2009','2008-2012','2010-2014', '2011-2015', '2012-2016'],
             tickmarkPlacement: 'on',
             title: {
                 enabled: false
@@ -1311,10 +1311,10 @@ $(function () {
         },
         series: [{
             name: 'International Corridor Owner Occupied',
-            data: [8898, 8983, 8592, 8328]
+            data: [8898, 8983, 8592, 6727, 6669, 6374]
         }, {
             name: 'International Corridor Renter Occupied',
-            data: [11909,10653,10478,10884]
+            data: [11909,10653,10478,10518, 10367, 10460]
         }
         ]
     });
@@ -1332,7 +1332,7 @@ $(function () {
             text: ''
         },
         xAxis: {
-            categories: ['2000','2005-2009','2008-2012','2010-2014'],
+            categories: ['2000','2005-2009','2008-2012','2010-2014', '2011-2015', '2012-2016'],
             tickmarkPlacement: 'on',
             title: {
                 enabled: false
@@ -1365,10 +1365,10 @@ $(function () {
         },
         series: [{
             name: 'UMD Owner Occupied',
-            data: [3317, 3403, 2946, 3025]
+            data: [3317, 3403, 2946, 1476, 1532, 1510]
         }, {
             name: 'UMD Renter Occupied',
-            data: [4116,4019,4108,4165]
+            data: [4116,4019,4108,1612, 1657, 1512]
         }
         ]
     });
@@ -1386,7 +1386,7 @@ $(function () {
             text: ''
         },
         xAxis: {
-            categories: ['2000','2005-2009','2008-2012','2010-2014'],
+            categories: ['2000','2005-2009','2008-2012','2010-2014', '2011-2015', '2012-2016'],
             tickmarkPlacement: 'on',
             title: {
                 enabled: false
@@ -1419,10 +1419,10 @@ $(function () {
         },
         series: [{
             name: 'International Corridor Owner Occupied',
-            data: [8912, 8816, 8033, 7980]
+            data: [8912, 8816, 8033, 6727, 6669, 6374]
         }, {
             name: 'International Corridor Renter Occupied',
-            data: [6418,6527,6270,6200]
+            data: [6418,6527,6270,10518, 10367, 10460]
         }
         ]
     });
@@ -2027,7 +2027,7 @@ $(function () {
             text: ''
         },
         xAxis: {
-            categories: ['2000','2005-2009','2008-2012'],
+            categories: ['2000','2005-2009','2008-2012', '2011-2016'],
             tickmarkPlacement: 'on',
             title: {
                 enabled: false
@@ -2060,14 +2060,14 @@ $(function () {
         },
         series: [{
             name: 'Single Family detached',
-            data: [6245,6225,6022]
+            data: [6245,6225,6022, 3917]
         }, {
             name: 'Single Family attached',
-            data: [547,681,727]
+            data: [547,681,727, 727]
         },
         {
         name: 'Multifamily',
-            data: [5114,5560,5953]
+            data: [5114,5560,5953, 5689]
             }
         ]
     });
@@ -2086,7 +2086,7 @@ $(function () {
             text: ''
         },
         xAxis: {
-            categories: ['2000','2005-2009','2008-2012'],
+            categories: ['2000','2005-2009','2008-2012', '2011-2016'],
             tickmarkPlacement: 'on',
             title: {
                 enabled: false
@@ -2119,14 +2119,14 @@ $(function () {
         },
         series: [{
             name: 'Single Family detached',
-            data: [5079,5507,5536]
+            data: [5079,5507,5536, 4029]
         }, {
             name: 'Single Family attached',
-            data: [570,616,730]
+            data: [570,616,730, 645]
         },
         {
         name: 'Multifamily',
-            data: [10281,9996,11651]
+            data: [10281,9996,11651, 14362]
             }
         ]
     });
@@ -2144,7 +2144,7 @@ $(function () {
             text: ''
         },
         xAxis: {
-            categories: ['2000','2005-2009','2008-2012','2010-2014'],
+            categories: ['2000','2005-2009','2008-2012','2010-2014', '2011-2016'],
             tickmarkPlacement: 'on',
             title: {
                 enabled: false
@@ -2177,14 +2177,14 @@ $(function () {
         },
         series: [{
             name: 'Single Family detached',
-            data: [7649,7354,7247,7252]
+            data: [7649,7354,7247,7252, 5480]
         }, {
             name: 'Single Family attached',
-            data: [1618,1715,1575,1543]
+            data: [1618,1715,1575,1543, 1707]
         },
         {
         name: 'Multifamily',
-            data: [11540,10567,10168,10417]
+            data: [11540,10567,10168,10417, 10384]
             }
         ]
     });
@@ -2202,7 +2202,7 @@ $(function () {
             text: ''
         },
         xAxis: {
-            categories: ['2000','2005-2009','2008-2012','2010-2014'],
+            categories: ['2000','2005-2009','2008-2012','2010-2014', '2011-2016'],
             tickmarkPlacement: 'on',
             title: {
                 enabled: false
@@ -2235,14 +2235,14 @@ $(function () {
         },
         series: [{
             name: 'Single Family detached',
-            data: [3712,3720,3768,3776]
+            data: [3712,3720,3768,3776, 2111]
         }, {
             name: 'Single Family attached',
-            data: [205,160,258,276]
+            data: [205,160,258,276, 44]
         },
         {
         name: 'Multifamily',
-            data: [3516,3542,3028,3138]
+            data: [3516,3542,3028,3138, 1159]
             }
         ]
     });
