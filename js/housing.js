@@ -1218,7 +1218,7 @@ $(function () {
             type: 'area'
         },
         title: {
-            text: 'Owner vs Renter occupied Housing units - Silver Springs'
+            text: 'Owner vs Renter occupied Housing units - Silver Spring'
         },
         subtitle: {
             text: ''
@@ -2080,7 +2080,7 @@ $(function () {
             type: 'area'
         },
         title: {
-            text: 'Number of Houses by type - Silver Springs' 
+            text: 'Number of Houses by type - Silver Spring' 
         },
         subtitle: {
             text: ''
